@@ -1,0 +1,33 @@
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+    height: 300px;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+#sidenav-overlay{
+    z-index: 50;
+}
+.navbar-fixed{
+    margin-bottom: 48px;
+}
+.detail{
+    background: url('assets/bg/cloudy-sky.jpg') #555 center;
+    padding: 10px;
+    background-size: cover;
+}
+.info-tab{
+    background-color: transparent;
+}
+.info-tab .tab a, 
+.info-tab .tab a:hover, 
+.info-tab .tab a.active {
+    background-color: transparent;
+    color: #fff;
+}
+.info-tab .indicator{
+    background-color: #fff;
+}
