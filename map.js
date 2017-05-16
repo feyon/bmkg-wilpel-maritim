@@ -1,7 +1,7 @@
 var map,infoWindow;
 function initMap() {
 map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 6,
+    zoom: 5,
     center: {lat: -5.087470, lng: 117.670192},
     streetViewControl: false,
     fullscreenControl: false,
@@ -9,15 +9,13 @@ map = new google.maps.Map(document.getElementById('map'), {
     scrollwheel: false,
 });
 
+
+//set center from ip api
 var apiGeolocationSuccess = function(position) {
     console.log("API geolocation success!\n\nlat = " + position.coords.latitude + "\nlng = " + position.coords.longitude);
-    var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-    };
-    map.setCenter(pos);    
+    zoomCenter(position);
 };
-
+//try geo based on ip address
 var tryAPIGeolocation = function() {
     jQuery.post( "http://geoip.nekudo.com/api/", 
     function(data) {
@@ -30,6 +28,7 @@ var tryAPIGeolocation = function() {
 
 var browserGeolocationSuccess = function(position) {
     console.log("Browser geolocation success!\n\nlat = " + position.coords.latitude + "\nlng = " + position.coords.longitude);
+    zoomCenter(position);
 };
 
 var browserGeolocationFail = function(error) {
@@ -47,7 +46,7 @@ var browserGeolocationFail = function(error) {
       break;
   }
 };
-
+//geolocation host on https or ssl with gmap api
 var tryGeolocation = function() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
@@ -56,21 +55,21 @@ var tryGeolocation = function() {
         {maximumAge: 50000, timeout: 20000, enableHighAccuracy: true});
   }
 };
-
+//try geolocation
 tryGeolocation();
 
- // Try HTML5 geolocation.
-// if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(function(position) {
-//     var pos = {
-//         lat: position.coords.latitude,
-//         lng: position.coords.longitude
-//     };
-//     map.setCenter(pos);
-//     });
-// }
+var zoomCenter = function(position){
+  var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+      };
+      map.setCenter(pos);
+      map.setZoom(8);
+}
 
-// Load GeoJSON.
+
+
+// Load polygon GeoJSON.
 map.data.loadGeoJson(
     'assets/area/A1.json');
 
