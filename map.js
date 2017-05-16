@@ -14,8 +14,9 @@ var apiGeolocationSuccess = function(position) {
 };
 
 var tryAPIGeolocation = function() {
-    jQuery.post( "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAbFARAnHRr4x2wT5Ypg6iyPXwcP950wPg", function(success) {
-        apiGeolocationSuccess({coords: {latitude: success.location.lat, longitude: success.location.lng}});
+    jQuery.post( "http://geoip.nekudo.com/api/", 
+    function(data) {
+        apiGeolocationSuccess({coords: {latitude: data.location.latitude, longitude: data.location.longitude}});
   })
   .fail(function(err) {
     console.log("API Geolocation error! \n\n"+err);
@@ -46,8 +47,8 @@ var tryGeolocation = function() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
         browserGeolocationSuccess,
-      browserGeolocationFail,
-      {maximumAge: 50000, timeout: 20000, enableHighAccuracy: true});
+        browserGeolocationFail,
+        {maximumAge: 50000, timeout: 20000, enableHighAccuracy: true});
   }
 };
 
