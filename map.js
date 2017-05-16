@@ -11,6 +11,11 @@ map = new google.maps.Map(document.getElementById('map'), {
 
 var apiGeolocationSuccess = function(position) {
     console.log("API geolocation success!\n\nlat = " + position.coords.latitude + "\nlng = " + position.coords.longitude);
+    var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+    };
+    map.setCenter(pos);    
 };
 
 var tryAPIGeolocation = function() {
