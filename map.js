@@ -9,20 +9,60 @@ map = new google.maps.Map(document.getElementById('map'), {
     scrollwheel: false,
 });
 
-infoWindow = new google.maps.InfoWindow;
+var apiGeolocationSuccess = function(position) {
+    console.log("API geolocation success!\n\nlat = " + position.coords.latitude + "\nlng = " + position.coords.longitude);
+};
+
+var tryAPIGeolocation = function() {
+    jQuery.post( "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAbFARAnHRr4x2wT5Ypg6iyPXwcP950wPg", function(success) {
+        apiGeolocationSuccess({coords: {latitude: success.location.lat, longitude: success.location.lng}});
+  })
+  .fail(function(err) {
+    console.log("API Geolocation error! \n\n"+err);
+  });
+};
+
+var browserGeolocationSuccess = function(position) {
+    console.log("Browser geolocation success!\n\nlat = " + position.coords.latitude + "\nlng = " + position.coords.longitude);
+};
+
+var browserGeolocationFail = function(error) {
+  switch (error.code) {
+    case error.TIMEOUT:
+      console.log("Browser geolocation error !\n\nTimeout.");
+      break;
+    case error.PERMISSION_DENIED:
+      if(error.message.indexOf("Only secure origins are allowed") == 0) {
+        tryAPIGeolocation();
+      }
+      break;
+    case error.POSITION_UNAVAILABLE:
+      console.log("Browser geolocation error !\n\nPosition unavailable.");
+      break;
+  }
+};
+
+var tryGeolocation = function() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+        browserGeolocationSuccess,
+      browserGeolocationFail,
+      {maximumAge: 50000, timeout: 20000, enableHighAccuracy: true});
+  }
+};
+
+tryGeolocation();
+
  // Try HTML5 geolocation.
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-    var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-    };
-    // infoWindow.setPosition(pos);
-    // infoWindow.setContent('Location found.');
-    // infoWindow.open(map);
-    map.setCenter(pos);
-    });
-}
+// if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(function(position) {
+//     var pos = {
+//         lat: position.coords.latitude,
+//         lng: position.coords.longitude
+//     };
+//     map.setCenter(pos);
+//     });
+// }
 
 // Load GeoJSON.
 map.data.loadGeoJson(
