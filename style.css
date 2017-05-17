@@ -1,7 +1,8 @@
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */
 #map {
-    height: 400px;
+    height:500px;
+    height: 82vh;
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -12,12 +13,19 @@ html, body {
     z-index: 50;
 }
 .navbar-fixed{
-    margin-bottom: 48px;
+    /*margin-bottom: 48px;*/
 }
+
+nav .brand-logo{
+    margin: 5px 0;
+}
+
 .detail{
-    background: url('assets/bg/cloudy-sky.jp') #555 center;
-    padding: 10px;
+    background: #555 center;
     background-size: cover;
+    bottom: 0;
+    position: fixed;
+    width: 100%
 }
 .info-tab{
     background-color: transparent;
