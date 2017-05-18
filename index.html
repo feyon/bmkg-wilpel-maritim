@@ -44,12 +44,11 @@
     <div id="h2" class="col s12">Data H+2</div>
     <div id="h3" class="col s12">Data H+3</div>-->
 
-    <a href="#"  ng-click="openDetail(area.name)">
         <div class="detail white-text" ng-style="detailBar">
             <p id="info" class="center-align">{{area.desc}}</p>
-            <!--<p class="center-align">
-                <button class="waves-effect waves-light btn blue darken-3">Info Selengkapnya</button>
-            </p>-->
+            <p class="center-align">
+                <button  ng-click="openDetail(area.name)" class="waves-effect waves-light btn blue darken-3">{{detailBtnTxt}}</button>
+            </p>
 
             <!--<div class="row white-text">
             <div class="col s12">
@@ -64,7 +63,6 @@
                 <div id="test2" class="col s12">Test 2</div>
             </div>-->
         </div>
-    </a>
 
     <!--jquery-->
     <script src="assets/js/jquery.min.js"></script>

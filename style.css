@@ -49,3 +49,13 @@ nav .brand-logo{
 .info-tab .indicator{
     background-color: #fff;
 }
+
+.btn{
+    padding: 0 1rem;
+    height:28px;
+    line-height: 28px;
+}
+
+.detail p{
+    margin: 10px 0;
+}

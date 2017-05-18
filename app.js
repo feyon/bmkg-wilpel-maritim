@@ -1,5 +1,5 @@
 angular.module('app', [])
-.controller('MainCtrl', function ($scope, $window) {
+.controller('MainCtrl', function ($scope, $window, $http) {
     
     // init map
     $window.map  = new google.maps.Map(document.getElementById('map'), {
@@ -56,17 +56,33 @@ angular.module('app', [])
 
         // magic is here :D
         $scope.$apply(function(){
-            $scope.detailBar = {'height':'10%'};
-            $scope.mapStyle = {'height':'90%'};
+            $scope.detailBar = {'height':'15%'};
+            $scope.mapStyle = {'height':'85%'};
             $scope.area = area;
         });
         
     });
 
+    $scope.detailBtnTxt = "Info Selengkapnya";            
 
     $scope.openDetail = function(code){
+        $scope.detailClose = !$scope.detailClose;    
+        if($scope.detailClose==true){
+            $scope.detailBar = {'height':'100%'};
+            $scope.detailBtnTxt = "Lihat Wilayah Perairan";
+        }else{
+            $scope.detailBar = {'height':'15%'};
+            $scope.detailBtnTxt = "Info Selengkapnya";            
+        }
+
         codearea = matchAreaToJson(code);
-        console.log(codearea);
+        // console.log(codearea);
+        const url = 'http://maritim.bmkg.go.id/xml/wilayah_pelayanan/prakiraan?kode='+codearea+'&format=json';
+        $http.get(url).then(function(res){
+            $scope.detailData = res.data;
+            console.log(res);
+        });
+        
     }
     
 });
