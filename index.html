@@ -3,80 +3,83 @@
   <head>
     <title>BMKG - Kemaritiman</title>
     <meta name="viewport" content="initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
     <meta charset="utf-8">
     <link rel="shortcut icon" href="assets/logo-bmkg.png" type="image/x-icon">
     <!-- Materialize CSS -->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
     
   </head>
 
-  <body >
-    <div class="navbar-fixed">
+  <body ng-controller="MainCtrl">
+    <!--<div class="navbar-fixed">
       <nav class="nav-extended blue darken-3">
         <div class="nav-wrapper">
         <a href="#" class="brand-logo"><img src="assets/logo-bmkg.png" alt="Logo" height="50"></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="side-nav" id="mobile-demo">
-            <!--<li><a href="#">Maritim</a></li>
+            <li><a href="#">Maritim</a></li>
             <li><a href="#">Cuaca</a></li>
-            <li><a href="#">Tentang</a></li>-->
+            <li><a href="#">Tentang</a></li>
         </ul>
         </div>
-        <!--<div class="nav-content">
+        <div class="nav-content">
         <ul class="tabs tabs-transparent">
             <li class="tab"><a class="active" href="#h0">Hari Ini</a></li>
             <li class="tab"><a href="#h1">Besok</a></li>
             <li class="tab"><a href="#h2">H+2</a></li>
             <li class="tab"><a href="#h3">H+3</a></li>
-        </ul>-->
+        </ul>
         </div>
       </nav>
-    </div>
+    </div>-->
 
     <!--map area-->
-    <div id="map"></div>
+    <div id="map" ng-style="mapStyle"></div>
 
     <!--<div id="h0" class="col s12">Data Hari Ini</div>
     <div id="h1" class="col s12">Data Besok</div>
     <div id="h2" class="col s12">Data H+2</div>
     <div id="h3" class="col s12">Data H+3</div>-->
 
-    <div class="detail white-text">
-        <p id="info" class="center-align">...</p>
-        <!--<p class="center-align">
-            <button class="waves-effect waves-light btn blue darken-3">Info Selengkapnya</button>
-        </p>-->
+    <a href="#"  ng-click="openDetail(area.name)">
+        <div class="detail white-text" ng-style="detailBar">
+            <p id="info" class="center-align">{{area.desc}}</p>
+            <!--<p class="center-align">
+                <button class="waves-effect waves-light btn blue darken-3">Info Selengkapnya</button>
+            </p>-->
 
-        <!--<div class="row white-text">
-        <div class="col s12">
-            <ul class="tabs info-tab">
-                <li class="tab col s3"><a href="#test1" class="">Peringatan</a></li>
-                <li class="tab col s3"><a href="#test2">Kondisi Sinoptik</a></li>
-            </ul>
-            </div>
-            <div id="test1" class="col s12">
-                <p>Angin di wilayah perairan Indonesia</p>
-            </div>
-            <div id="test2" class="col s12">Test 2</div>
-        </div>-->
-    </div>
+            <!--<div class="row white-text">
+            <div class="col s12">
+                <ul class="tabs info-tab">
+                    <li class="tab col s3"><a href="#test1" class="">Peringatan</a></li>
+                    <li class="tab col s3"><a href="#test2">Kondisi Sinoptik</a></li>
+                </ul>
+                </div>
+                <div id="test1" class="col s12">
+                    <p>Angin di wilayah perairan Indonesia</p>
+                </div>
+                <div id="test2" class="col s12">Test 2</div>
+            </div>-->
+        </div>
+    </a>
 
     <!--jquery-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
     <!-- Materialize-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>-->
     <!--Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <!--map-->
-    <script src="map.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbFARAnHRr4x2wT5Ypg6iyPXwcP950wPg&callback=initMap"></script>
+    <script src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbFARAnHRr4x2wT5Ypg6iyPXwcP950wPg"></script>
     
     <script>
-    $(function(){
-          $(".button-collapse").sideNav();
-    })
+    // $(function(){
+    //       $(".button-collapse").sideNav();
+    // })
     </script>
   </body>
 </html>

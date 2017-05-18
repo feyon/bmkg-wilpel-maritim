@@ -1,8 +1,13 @@
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */
 #map {
-    height:500px;
-    height: 82vh;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -25,7 +30,12 @@ nav .brand-logo{
     background-size: cover;
     bottom: 0;
     position: fixed;
-    width: 100%
+    width: 100%;
+    height: 0;
+    -webkit-transition: height 0.5s;
+       -moz-transition: height 0.5s;
+         -o-transition: height 0.5s;
+            transition: height 0.5s;
 }
 .info-tab{
     background-color: transparent;
