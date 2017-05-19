@@ -24,7 +24,9 @@ html, body {
 nav .brand-logo{
     margin: 5px 0;
 }
-
+.row{
+    margin-bottom: 0;
+}
 .detail{
     background: #555 center;
     background-size: cover;
@@ -37,6 +39,21 @@ nav .brand-logo{
          -o-transition: height 0.5s;
             transition: height 0.5s;
 }
+
+.content-tab{
+    background-color: rgba(0,0,0,0.25);
+}
+.content-tab .tab a, 
+.content-tab .tab a:hover, 
+.content-tab .tab a.active {
+    background-color: transparent;
+    color: #fff;
+}
+.content-tab .indicator{
+    background-color: #fff;
+}
+
+
 .info-tab{
     background-color: transparent;
 }
@@ -57,5 +74,42 @@ nav .brand-logo{
 }
 
 .detail p{
-    margin: 10px 0;
+    margin: 0;
+    padding: 10px 0;
+}
+.detail-heading{
+    background-color: rgba(0,0,0,0.25);    
+}
+.detail-content{
+    margin-top: 10px;
+}
+
+@media (max-width:480px) {
+    .detail-content{
+        overflow-y: scroll; 
+        -webkit-overflow-scrolling: touch;
+    }
+    
+}
+
+.kondisi{
+    padding: 10px;
+    min-height: 130px;
+}
+.wind-info p{
+    margin: 0;
+    padding: 0;
+}
+.wind-info div:first-child{
+    border-right: 1px solid white;
+}
+.wind-info div:last-child{
+    border-left: 1px solid white;
+}
+.content{
+    padding: 0 10px;
+}
+p.small{
+    font-size: 9pt;
+    line-height: 1.3em;
 }

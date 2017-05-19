@@ -39,41 +39,293 @@
     <!--map area-->
     <div id="map" ng-style="mapStyle"></div>
 
-    <!--<div id="h0" class="col s12">Data Hari Ini</div>
-    <div id="h1" class="col s12">Data Besok</div>
-    <div id="h2" class="col s12">Data H+2</div>
-    <div id="h3" class="col s12">Data H+3</div>-->
 
         <div class="detail white-text" ng-style="detailBar">
-            <p id="info" class="center-align">{{area.desc}}</p>
-            <p class="center-align">
-                <button  ng-click="openDetail(area.name)" class="waves-effect waves-light btn blue darken-3">{{detailBtnTxt}}</button>
-            </p>
+            <div class="detail-heading">
+                <p class="center-align" ng-hide="areaName">{{area.desc}}</p>
+                <p class="center-align">
+                    <button  ng-click="openDetail(area.name)" class="waves-effect waves-light btn blue darken-3">{{detailBtnTxt}}</button>
+                </p>
+            </div>
+            
 
-            <!--<div class="row white-text">
-            <div class="col s12">
-                <ul class="tabs info-tab">
-                    <li class="tab col s3"><a href="#test1" class="">Peringatan</a></li>
-                    <li class="tab col s3"><a href="#test2">Kondisi Sinoptik</a></li>
-                </ul>
-                </div>
-                <div id="test1" class="col s12">
-                    <p>Angin di wilayah perairan Indonesia</p>
-                </div>
-                <div id="test2" class="col s12">Test 2</div>
-            </div>-->
+        <!--swipeable day   -->
+        <ul id="tabs-swipe" class="tabs tabs-fixed-width content-tab">
+            <li class="tab col s3 l3"><a class="active" href="#h0">Hari Ini</a></li>
+            <li class="tab col s3 l3"><a href="#h1">Besok</a></li>
+            <li class="tab col s3 l3"><a href="#h2">H+2</a></li>
+            <li class="tab col s3 l3"><a href="#h3">H+3</a></li>
+        </ul>
+
+        <!--hari ini-->
+        <div id="h0" class="detail-content">
+            <div class="row">
+                <div class="col l4">
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="tabs info-tab tabs-fixed-width">
+                                <li class="tab col s6"><a class="active" href="#peringatan">Peringatan</a></li>
+                                <li class="tab col s6"><a href="#kondisi">Kondisi Sinoptik</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    <div id="peringatan" class="col s12">
+                        <div class="kondisi">{{dataArea.h.peringatan_dini}}</div>
+                    </div>
+                    <div id="kondisi" class="col s12">
+                        <div class="kondisi">{{dataArea.h.kondisi_synoptik}}</div>
+                    </div>
+                </div><!--/col l4-->
+
+                <div class="col l4">
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="center-align">
+                                <img src="assets/weather/clouds.svg" class="responsive-img">
+                                <p><strong>{{dataArea.h.cuaca}}</strong></p>
+                            </div>                                               
+                        </div>
+                        <div class="col s7">
+                            <h5 class="center-align">{{area.desc}}</h5>
+                        </div>
+                    </div>
+                </div><!--/col l4-->
+
+                <!--waves wind speed info-->
+                <div class="col l4">
+                    <div class="row center-align wind-info">
+                        <div class="col s4">
+                            <img src="assets/weather/waves.svg" class="responsive-img">
+                            <p>{{dataArea.h.gelombang_min}} - {{dataArea.h.gelombang_max}} m</p>
+                        </div>
+                        <div class="col s4">
+                            <img src="assets/weather/wind.svg" class="responsive-img">
+                            <p>{{dataArea.h.angin_speed_min}} - {{dataArea.h.angin_speed_max}} knot</p>
+                        </div>
+                        <div class="col s4">
+                            <img src="assets/weather/navigation.svg" class="responsive-img">
+                            <p>{{dataArea.h.angin_to}}</p>
+                        </div>
+                    </div>
+                </div><!--/col l4-->
+            </div><!--/row-->      
+
+            <div class="content">
+                <p class="small"><i>
+                <strong>Berlaku :</strong><br>
+                {{dataArea.h.valid_from}}<br>
+                s/d <br>
+                {{dataArea.h.valid_to}}
+                </i></p>
+            </div> 
+        </div>
+
+        <!--Besok-->
+        <div id="h1" class="detail-content">
+            <div class="row">
+                <div class="col l4">
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="tabs info-tab tabs-fixed-width">
+                                <li class="tab col s6"><a class="active" href="#peringatan1">Peringatan</a></li>
+                                <li class="tab col s6"><a href="#kondisi1">Kondisi Sinoptik</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    <div id="peringatan1" class="col s12">
+                        <div class="kondisi">{{dataArea.h1.peringatan_dini}}</div>
+                    </div>
+                    <div id="kondisi1" class="col s12">
+                        <div class="kondisi">{{dataArea.h1.kondisi_synoptik}}</div>
+                    </div>
+                </div><!--/col l4-->
+
+                <div class="col l4">
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="center-align">
+                                <img src="assets/weather/clouds.svg" class="responsive-img">
+                                <p><strong>{{dataArea.h1.cuaca}}</strong></p>
+                            </div>                                               
+                        </div>
+                        <div class="col s7">
+                            <h5 class="center-align">{{area.desc}}</h5>
+                        </div>
+                    </div>
+                </div><!--/col l4-->
+
+                <!--waves wind speed info-->
+                <div class="col l4">
+                    <div class="row center-align wind-info">
+                        <div class="col s4">
+                            <img src="assets/weather/waves.svg" class="responsive-img">
+                            <p>{{dataArea.h1.gelombang_min}} - {{dataArea.h1.gelombang_max}} m</p>
+                        </div>
+                        <div class="col s4">
+                            <img src="assets/weather/wind.svg" class="responsive-img">
+                            <p>{{dataArea.h1.angin_speed_min}} - {{dataArea.h1.angin_speed_max}} knot</p>
+                        </div>
+                        <div class="col s4">
+                            <img src="assets/weather/navigation.svg" class="responsive-img">
+                            <p>{{dataArea.h1.angin_to}}</p>
+                        </div>
+                    </div>
+                </div><!--/col l4-->
+            </div><!--/row-->      
+
+            <div class="content">
+                <p class="small"><i>
+                <strong>Berlaku :</strong><br>
+                {{dataArea.h1.valid_from}}<br>
+                s/d <br>
+                {{dataArea.h1.valid_to}}
+                </i></p>
+            </div> 
+        </div>
+
+        <!--H+2-->
+        <div id="h2" class="detail-content">
+            <div class="row">
+                <div class="col l4">
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="tabs info-tab tabs-fixed-width">
+                                <li class="tab col s6"><a class="active" href="#peringatan2">Peringatan</a></li>
+                                <li class="tab col s6"><a href="#kondisi2">Kondisi Sinoptik</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    <div id="peringatan2" class="col s12">
+                        <div class="kondisi">{{dataArea.h2.peringatan_dini}}</div>
+                    </div>
+                    <div id="kondisi2" class="col s12">
+                        <div class="kondisi">{{dataArea.h2.kondisi_synoptik}}</div>
+                    </div>
+                </div><!--/col l4-->
+
+                <div class="col l4">
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="center-align">
+                                <img src="assets/weather/clouds.svg" class="responsive-img">
+                                <p><strong>{{dataArea.h2.cuaca}}</strong></p>
+                            </div>                                               
+                        </div>
+                        <div class="col s7">
+                            <h5 class="center-align">{{area.desc}}</h5>
+                        </div>
+                    </div>
+                </div><!--/col l4-->
+
+                <!--waves wind speed info-->
+                <div class="col l4">
+                    <div class="row center-align wind-info">
+                        <div class="col s4">
+                            <img src="assets/weather/waves.svg" class="responsive-img">
+                            <p>{{dataArea.h2.gelombang_min}} - {{dataArea.h2.gelombang_max}} m</p>
+                        </div>
+                        <div class="col s4">
+                            <img src="assets/weather/wind.svg" class="responsive-img">
+                            <p>{{dataArea.h2.angin_speed_min}} - {{dataArea.h2.angin_speed_max}} knot</p>
+                        </div>
+                        <div class="col s4">
+                            <img src="assets/weather/navigation.svg" class="responsive-img">
+                            <p>{{dataArea.h2.angin_to}}</p>
+                        </div>
+                    </div>
+                </div><!--/col l4-->
+            </div><!--/row-->      
+
+            <div class="content">
+                <p class="small"><i>
+                <strong>Berlaku :</strong><br>
+                {{dataArea.h2.valid_from}}<br>
+                s/d <br>
+                {{dataArea.h2.valid_to}}
+                </i></p>
+            </div> 
+        </div>
+                
+        <!--H+3-->
+        <div id="h3" class="detail-content">
+            <div class="row">
+                <div class="col l4">
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="tabs info-tab tabs-fixed-width">
+                                <li class="tab col s6"><a class="active" href="#peringatan3">Peringatan</a></li>
+                                <li class="tab col s6"><a href="#kondisi3">Kondisi Sinoptik</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    <div id="peringatan3" class="col s12">
+                        <div class="kondisi">{{dataArea.h3.peringatan_dini}}</div>
+                    </div>
+                    <div id="kondisi3" class="col s12">
+                        <div class="kondisi">{{dataArea.h3.kondisi_synoptik}}</div>
+                    </div>
+                </div><!--/col l4-->
+
+                <div class="col l4">
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="center-align">
+                                <img src="assets/weather/clouds.svg" class="responsive-img">
+                                <p><strong>{{dataArea.h3.cuaca}}</strong></p>
+                            </div>                                               
+                        </div>
+                        <div class="col s7">
+                            <h5 class="center-align">{{area.desc}}</h5>
+                        </div>
+                    </div>
+                </div><!--/col l4-->
+
+                <!--waves wind speed info-->
+                <div class="col l4">
+                    <div class="row center-align wind-info">
+                        <div class="col s4">
+                            <img src="assets/weather/waves.svg" class="responsive-img">
+                            <p>{{dataArea.h3.gelombang_min}} - {{dataArea.h3.gelombang_max}} m</p>
+                        </div>
+                        <div class="col s4">
+                            <img src="assets/weather/wind.svg" class="responsive-img">
+                            <p>{{dataArea.h3.angin_speed_min}} - {{dataArea.h3.angin_speed_max}} knot</p>
+                        </div>
+                        <div class="col s4">
+                            <img src="assets/weather/navigation.svg" class="responsive-img">
+                            <p>{{dataArea.h3.angin_to}}</p>
+                        </div>
+                    </div>
+                </div><!--/col l4-->
+            </div><!--/row-->      
+
+            <div class="content">
+                <p class="small"><i>
+                <strong>Berlaku :</strong><br>
+                {{dataArea.h3.valid_from}}<br>
+                s/d <br>
+                {{dataArea.h3.valid_to}}
+                </i></p>
+            </div> 
+        </div>
+            
         </div>
 
     <!--jquery-->
     <script src="assets/js/jquery.min.js"></script>
     <!-- Materialize-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <!--Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <!--map-->
     <script src="http://d3js.org/topojson.v1.js" charset="utf-8"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbFARAnHRr4x2wT5Ypg6iyPXwcP950wPg"></script>
     <script src="app.js"></script>
-    
+    <script>
+    $(document).ready(function(){
+        $('ul.tabs').tabs();
+        $('#tabs-swipe').tabs();
+    });
+  </script>
   </body>
 </html>
