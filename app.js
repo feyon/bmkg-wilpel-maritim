@@ -1,4 +1,7 @@
 angular.module('app', [])
+.config(function($httpProvider){
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+})
 .controller('MainCtrl', function ($scope, $window, $http) {
     
     // init map
@@ -12,11 +15,10 @@ angular.module('app', [])
     });
     const map = $window.map;
 
-    //try geolocation
     // tryGeolocation();
     
-    //load map json
-    map.data.loadGeoJson('assets/area/ALL.json');
+    getAreaJson();
+ 
     //set initial state transparent for each polygon
     map.data.setStyle(function(feature){
         var color = "transparent";
@@ -66,28 +68,42 @@ angular.module('app', [])
     $scope.detailBtnTxt = "Info Selengkapnya";            
 
     $scope.openDetail = function(code){
+        codearea = matchAreaToJson(code); //return i.e : A.1 into A.01;
+        // console.log(codearea);
+        // const url = 'http://maritim.bmkg.go.id/xml/wilayah_pelayanan/prakiraan?kode='+codearea+'&format=json';
+        const url = 'assets/response-bmkg-test.json';
+        
         $scope.detailClose = !$scope.detailClose;    
         if($scope.detailClose==true){
+            //opened detail
             $scope.detailBar = {'height':'100%'};
             $scope.detailBtnTxt = "Lihat Wilayah Perairan";
-        }else{
+            //get detail from api
+            getDetail(url);            
+        }else{ 
+            //closed detail
             $scope.detailBar = {'height':'15%'};
             $scope.detailBtnTxt = "Info Selengkapnya";            
         }
-
-        codearea = matchAreaToJson(code);
-        // console.log(codearea);
-        const url = 'http://maritim.bmkg.go.id/xml/wilayah_pelayanan/prakiraan?kode='+codearea+'&format=json';
-        $http.get(url).then(function(res){
-            $scope.detailData = res.data;
-            console.log(res);
-        });
-        
     }
     
 });
 
+//get json file add to map from jquery
+const getAreaJson = function(){
+    $.getJSON("assets/area/map.json", function(data){
+        geoJsonObject = topojson.feature(data, data.objects.collection);
+        map.data.addGeoJson(geoJsonObject); 
+        console.log('areas are loaded..')
+      }); 
+}
 
+//get detail area
+const getDetail = function(url){
+    $.getJSON(url, function(data){
+        console.log(data);
+      }); 
+}
 
 //geolocation host on https or ssl with gmap api
 const tryGeolocation = function() {
