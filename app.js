@@ -1,7 +1,27 @@
 angular.module('app', ['ngSanitize'])
-.config(function($httpProvider){
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
-})
+.filter('cut', function () {
+        return function (value, wordwise, max, tail) {
+            if (!value) return '';
+
+            max = parseInt(max, 10);
+            if (!max) return value;
+            if (value.length <= max) return value;
+
+            value = value.substr(0, max);
+            if (wordwise) {
+                var lastspace = value.lastIndexOf(' ');
+                if (lastspace !== -1) {
+                  //Also remove . and , so its gives a cleaner result.
+                  if (value.charAt(lastspace-1) === '.' || value.charAt(lastspace-1) === ',') {
+                    lastspace = lastspace - 1;
+                  }
+                  value = value.substr(0, lastspace);
+                }
+            }
+
+            return value + (tail || ' …');
+        };
+    })
 .controller('MainCtrl', function ($scope, $window, $http, $sce) {
     
     // init map
@@ -17,7 +37,18 @@ angular.module('app', ['ngSanitize'])
 
     tryGeolocation();
     
-    getAreaJson();
+    // getAreaJson();
+    $.getJSON("assets/area/map.json", function(data){
+        geoJsonObject = topojson.feature(data, data.objects.collection);
+        map.data.addGeoJson(geoJsonObject); 
+        console.log('areas are loaded..');
+        
+        $scope.$apply(function(){
+            $scope.arealist = geoJsonObject.features;
+            $scope.topology = data;
+        }); 
+        // console.log(geoJsonObject);
+      }); 
  
     //set initial state transparent for each polygon
     map.data.setStyle(function(feature){
@@ -129,15 +160,39 @@ angular.module('app', ['ngSanitize'])
                         
         }
     }
+
+    $scope.closeNameBar = function(){
+        $scope.detailBar = {'height':'0'};
+        $scope.mapStyle = {'height':'100%'};
+    }
     
+    $scope.jumpToArea = function(coordinate,name){     
+        // console.log(coordinate);
+        const pos = {
+            lat: coordinate[1],
+            lng: coordinate[0]
+        };
+        map.setCenter(pos);
+        map.setZoom(6);
+
+        //trigger poly click
+        map.data.forEach(function(feature) {
+          if (feature.getProperty('name') === name) {
+              google.maps.event.trigger(map.data, 'click', {
+              feature: feature
+            });
+          }
+        });
+    }
 });
+
 
 //get json file add to map from jquery
 const getAreaJson = function(){
     $.getJSON("assets/area/map.json", function(data){
         geoJsonObject = topojson.feature(data, data.objects.collection);
         map.data.addGeoJson(geoJsonObject); 
-        console.log('areas are loaded..')
+        console.log('areas are loaded..');
       }); 
 }
 

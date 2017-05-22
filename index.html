@@ -7,40 +7,37 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="assets/logo-bmkg.png" type="image/x-icon">
     <!-- Materialize CSS -->
-    <!--<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
     
   </head>
 
   <body ng-controller="MainCtrl">
-    <!--<div class="navbar-fixed">
-      <nav class="nav-extended blue darken-3">
+    <div class="navbar-fixed">
+      <nav class="nav blue darken-3">
         <div class="nav-wrapper">
         <a href="#" class="brand-logo"><img src="assets/logo-bmkg.png" alt="Logo" height="50"></a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="side-nav" id="mobile-demo">
-            <li><a href="#">Maritim</a></li>
-            <li><a href="#">Cuaca</a></li>
-            <li><a href="#">Tentang</a></li>
-        </ul>
-        </div>
-        <div class="nav-content">
-        <ul class="tabs tabs-transparent">
-            <li class="tab"><a class="active" href="#h0">Hari Ini</a></li>
-            <li class="tab"><a href="#h1">Besok</a></li>
-            <li class="tab"><a href="#h2">H+2</a></li>
-            <li class="tab"><a href="#h3">H+3</a></li>
+        <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large" ng-click="closeNameBar()"><i class="material-icons">menu</i></a>
+        <ul class="side-nav fixed" id="mobile-demo">
+            <li class="search">
+                <div class="search-wrapper card">
+                    <input id="search" ng-model="searchArea"><i class="material-icons">search</i>
+                </div>
+            </li>
+            <li ng-repeat="area in arealist | filter:searchArea | orderBy:'properties.name'">
+                <a href="#" ng-click="jumpToArea(area.geometry.coordinates[0][0],area.properties.name)">{{area.properties.description | cut:true:30:'...'}}</a>
+            </li>
         </ul>
         </div>
       </nav>
-    </div>-->
+    </div>
 
     <!--map area-->
     <div id="map" ng-style="mapStyle"></div>
 
 
-        <div class="detail white-text" ng-style="detailBar">
+    <div class="detail white-text" ng-style="detailBar">
             <div class="detail-heading">
                 <p class="center-align" ng-hide="areaName">{{area.desc}}</p>
                 <p class="center-align">
@@ -323,12 +320,12 @@
             </div> 
         </div>
             
-        </div>
+    </div>
 
     <!--jquery-->
     <script src="assets/js/jquery.min.js"></script>
     <!-- Materialize-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
     <!--Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
@@ -338,6 +335,9 @@
     <script src="app.js"></script>
     <script>
     $(document).ready(function(){
+        $(".button-collapse").sideNav({
+            closeOnClick: true,
+        });
         $('ul.tabs').tabs();
         $('#tabs-swipe').tabs();
     });
