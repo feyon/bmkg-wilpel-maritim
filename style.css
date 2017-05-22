@@ -40,6 +40,10 @@ nav .brand-logo{
             transition: height 0.5s;
 }
 
+.overflow{
+    overflow: auto;
+}
+
 .content-tab{
     background-color: rgba(0,0,0,0.25);
 }
@@ -80,16 +84,21 @@ nav .brand-logo{
 .detail-heading{
     background-color: rgba(0,0,0,0.25);    
 }
-.detail-content{
-    margin-top: 10px;
+
+.spinner{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(35, 35, 35, 0.82);
+    padding-top: 80px;
 }
 
-@media (max-width:480px) {
-    .detail-content{
-        overflow-y: scroll; 
-        -webkit-overflow-scrolling: touch;
-    }
-    
+.preloader-wrapper.active {
+    display: block;
+}
+
+.detail-content{
+    margin-top: 10px;
 }
 
 .kondisi{

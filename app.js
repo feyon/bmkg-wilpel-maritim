@@ -1,8 +1,8 @@
-angular.module('app', [])
+angular.module('app', ['ngSanitize'])
 .config(function($httpProvider){
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
 })
-.controller('MainCtrl', function ($scope, $window, $http) {
+.controller('MainCtrl', function ($scope, $window, $http, $sce) {
     
     // init map
     $window.map  = new google.maps.Map(document.getElementById('map'), {
@@ -67,6 +67,7 @@ angular.module('app', [])
 
     $scope.detailBtnTxt = "Info Selengkapnya";            
 
+    //detail view area
     $scope.openDetail = function(code){
         codearea = matchAreaToJson(code); //return i.e : A.1 into A.01;
         const url = 'http://maritim.bmkg.go.id/xml/wilayah_pelayanan/prakiraan?kode='+codearea+'&format=json';
@@ -76,11 +77,13 @@ angular.module('app', [])
         if($scope.detailClose==true){
             //opened detail
             $scope.detailBar = {'height':'100%'};
+            $('.detail').addClass('overflow');
             $scope.detailBtnTxt = "Lihat Wilayah Perairan";
             $scope.areaName = true;
 
             //get detail from api
             $.getJSON(url,function(data){
+                // console.log('Loading..');                
                 obj = data;
                 // magic is here :D
                 $scope.$apply(function(){
@@ -90,13 +93,37 @@ angular.module('app', [])
                         'h2': obj.kategoris[2],
                         'h3': obj.kategoris[3],                    
                     };
-                    console.log($scope.dataArea);
+                    $scope.spinnerShow = true;
+                    //show data as html
+                    $scope.dataArea.h.peringatan_dini = $sce.trustAsHtml(obj.kategoris[0].peringatan_dini);
+                    $scope.dataArea.h1.peringatan_dini = $sce.trustAsHtml(obj.kategoris[1].peringatan_dini);
+                    $scope.dataArea.h2.peringatan_dini = $sce.trustAsHtml(obj.kategoris[2].peringatan_dini);
+                    $scope.dataArea.h3.peringatan_dini = $sce.trustAsHtml(obj.kategoris[3].peringatan_dini);
+
+                    $scope.dataArea.h.kondisi_sinoptik = $sce.trustAsHtml(obj.kategoris[0].kondisi_synoptik);
+                    $scope.dataArea.h1.kondisi_synoptik = $sce.trustAsHtml(obj.kategoris[1].kondisi_synoptik);
+                    $scope.dataArea.h2.kondisi_synoptik = $sce.trustAsHtml(obj.kategoris[2].kondisi_synoptik);
+                    $scope.dataArea.h3.kondisi_synoptik = $sce.trustAsHtml(obj.kategoris[3].kondisi_synoptik);
+
+                    $scope.dataArea.h.icon = matchCuaca($scope.dataArea.h.cuaca);
+                    $scope.dataArea.h1.icon = matchCuaca($scope.dataArea.h1.cuaca);
+                    $scope.dataArea.h2.icon = matchCuaca($scope.dataArea.h2.cuaca);
+                    $scope.dataArea.h3.icon = matchCuaca($scope.dataArea.h3.cuaca);
+                    
+                    // console.log($scope.dataArea);
                 });  
-            }); 
+            }).done(function(){
+                // console.log('selesai');
+                $scope.$apply(function(){
+                    $scope.spinnerShow = false;                
+                })
+            })
+            ; 
 
         }else{ 
             //closed detail
             $scope.detailBar = {'height':'15%'};
+            $('.detail').removeClass('overflow');
             $scope.detailBtnTxt = "Info Selengkapnya";
             $scope.areaName = false;
                         
@@ -182,4 +209,18 @@ function matchAreaToJson(str){
 
 function pad(n) {
     return (n < 10) ? ("0" + n) : n;
+}
+
+function matchCuaca(str){
+    if(str!=null){
+        var string = str,
+        substring = "ujan";
+        if(string.includes(substring)){
+            return 'assets/weather/rain.svg';
+        }else{
+            return 'assets/weather/clouds.svg';    
+        }
+    }else{
+        return 'assets/weather/clouds.svg';
+    }
 }

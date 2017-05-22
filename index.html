@@ -57,6 +57,20 @@
             <li class="tab col s3 l3"><a href="#h3">H+3</a></li>
         </ul>
 
+        <div class="spinner" ng-show="spinnerShow">
+            <div class="preloader-wrapper active" style="margin:auto;">
+                <div class="spinner-layer spinner-white-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                    <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
         <!--hari ini-->
         <div id="h0" class="detail-content">
             <div class="row">
@@ -70,10 +84,10 @@
                         </div>
                     </div>                
                     <div id="peringatan" class="col s12">
-                        <div class="kondisi">{{dataArea.h.peringatan_dini}}</div>
+                        <div class="kondisi" ng-bind-html="dataArea.h.peringatan_dini"></div>
                     </div>
                     <div id="kondisi" class="col s12">
-                        <div class="kondisi">{{dataArea.h.kondisi_synoptik}}</div>
+                        <div class="kondisi" ng-bind-html="dataArea.h.kondisi_synoptik"></div>
                     </div>
                 </div><!--/col l4-->
 
@@ -81,7 +95,7 @@
                     <div class="row">
                         <div class="col s5">
                             <div class="center-align">
-                                <img src="assets/weather/clouds.svg" class="responsive-img">
+                                <img src="{{dataArea.h.icon}}" class="responsive-img">
                                 <p><strong>{{dataArea.h.cuaca}}</strong></p>
                             </div>                                               
                         </div>
@@ -133,10 +147,10 @@
                         </div>
                     </div>                
                     <div id="peringatan1" class="col s12">
-                        <div class="kondisi">{{dataArea.h1.peringatan_dini}}</div>
+                        <div class="kondisi" ng-bind-html="dataArea.h1.peringatan_dini"></div>
                     </div>
                     <div id="kondisi1" class="col s12">
-                        <div class="kondisi">{{dataArea.h1.kondisi_synoptik}}</div>
+                        <div class="kondisi" ng-bind-html="dataArea.h1.kondisi_synoptik"></div>
                     </div>
                 </div><!--/col l4-->
 
@@ -144,7 +158,7 @@
                     <div class="row">
                         <div class="col s5">
                             <div class="center-align">
-                                <img src="assets/weather/clouds.svg" class="responsive-img">
+                                <img src="{{dataArea.h1.icon}}" class="responsive-img">
                                 <p><strong>{{dataArea.h1.cuaca}}</strong></p>
                             </div>                                               
                         </div>
@@ -182,7 +196,7 @@
                 </i></p>
             </div> 
         </div>
-
+        
         <!--H+2-->
         <div id="h2" class="detail-content">
             <div class="row">
@@ -196,10 +210,10 @@
                         </div>
                     </div>                
                     <div id="peringatan2" class="col s12">
-                        <div class="kondisi">{{dataArea.h2.peringatan_dini}}</div>
+                        <div class="kondisi" ng-bind-html="dataArea.h2.peringatan_dini"></div>
                     </div>
                     <div id="kondisi2" class="col s12">
-                        <div class="kondisi">{{dataArea.h2.kondisi_synoptik}}</div>
+                        <div class="kondisi" ng-bind-html="dataArea.h2.kondisi_synoptik"></div>
                     </div>
                 </div><!--/col l4-->
 
@@ -207,7 +221,7 @@
                     <div class="row">
                         <div class="col s5">
                             <div class="center-align">
-                                <img src="assets/weather/clouds.svg" class="responsive-img">
+                                <img src="{{dataArea.h2.icon}}" class="responsive-img">                                
                                 <p><strong>{{dataArea.h2.cuaca}}</strong></p>
                             </div>                                               
                         </div>
@@ -259,10 +273,10 @@
                         </div>
                     </div>                
                     <div id="peringatan3" class="col s12">
-                        <div class="kondisi">{{dataArea.h3.peringatan_dini}}</div>
+                        <div class="kondisi" ng-bind-html="dataArea.h3.peringatan_dini"></div>
                     </div>
                     <div id="kondisi3" class="col s12">
-                        <div class="kondisi">{{dataArea.h3.kondisi_synoptik}}</div>
+                        <div class="kondisi" ng-bind-html="dataArea.h3.kondisi_synoptik"></div>
                     </div>
                 </div><!--/col l4-->
 
@@ -270,7 +284,7 @@
                     <div class="row">
                         <div class="col s5">
                             <div class="center-align">
-                                <img src="assets/weather/clouds.svg" class="responsive-img">
+                                <img src="{{dataArea.h3.icon}}" class="responsive-img">                                                                
                                 <p><strong>{{dataArea.h3.cuaca}}</strong></p>
                             </div>                                               
                         </div>
@@ -317,6 +331,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <!--Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
     <!--map-->
     <script src="http://d3js.org/topojson.v1.js" charset="utf-8"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbFARAnHRr4x2wT5Ypg6iyPXwcP950wPg"></script>
