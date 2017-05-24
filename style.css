@@ -18,6 +18,7 @@ html, body {
 #sidenav-overlay{
     z-index: 50;
 }
+
 li.search {
     margin-top: 1px;
     padding: 1px 0 0 0;
@@ -59,6 +60,12 @@ li.search .search-wrapper i.material-icons {
 nav .brand-logo{
     margin: 5px 0;
 }
+
+.collapsible-body li a {
+    font-weight: 400;
+    padding: 0 37.5px 0 45px;
+}
+
 .row{
     margin-bottom: 0;
 }

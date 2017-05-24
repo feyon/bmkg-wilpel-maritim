@@ -25,9 +25,22 @@
                     <input id="search" ng-model="searchArea"><i class="material-icons">search</i>
                 </div>
             </li>
-            <li ng-repeat="area in arealist | filter:searchArea | orderBy:'properties.name'">
-                <a href="#" ng-click="jumpToArea(area.geometry.coordinates[0][0],area.properties.name)">{{area.properties.description | cut:true:30:'...'}}</a>
+
+            <li>
+                <ul class="collapsible collapsible-accordion">
+                    <li ng-repeat="(key,value) in arealist | orderBy:'kode' | filter:searchArea | groupBy:'propinsi'">
+                        <a class="collapsible-header waves-effect waves-teal">{{key | cut:true:30:'...'}}</a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li ng-repeat="area in value | orderBy:'kode'">
+                                <a href="#" ng-click="jumpToArea(area.kode)">{{area.nama | cut:true:30:'...'}}</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </li>
+
         </ul>
         </div>
       </nav>
@@ -329,6 +342,7 @@
     <!--Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.16/angular-filter.min.js"></script>
     <!--map-->
     <script src="http://d3js.org/topojson.v1.js" charset="utf-8"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbFARAnHRr4x2wT5Ypg6iyPXwcP950wPg"></script>
@@ -340,6 +354,7 @@
         });
         $('ul.tabs').tabs();
         $('#tabs-swipe').tabs();
+        $('.collapsible').collapsible();
     });
   </script>
   </body>

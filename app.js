@@ -1,4 +1,4 @@
-angular.module('app', ['ngSanitize'])
+angular.module('app', ['ngSanitize','angular.filter'])
 .filter('cut', function () {
         return function (value, wordwise, max, tail) {
             if (!value) return '';
@@ -42,13 +42,14 @@ angular.module('app', ['ngSanitize'])
         geoJsonObject = topojson.feature(data, data.objects.collection);
         map.data.addGeoJson(geoJsonObject); 
         console.log('areas are loaded..');
-        
+    }); 
+    
+    // get area list in navigation
+    $.getJSON("assets/area/mapping.json", function(data){        
         $scope.$apply(function(){
-            $scope.arealist = geoJsonObject.features;
-            $scope.topology = data;
+            $scope.arealist = data;
         }); 
-        // console.log(geoJsonObject);
-      }); 
+    }); 
  
     //set initial state transparent for each polygon
     map.data.setStyle(function(feature){
@@ -166,25 +167,28 @@ angular.module('app', ['ngSanitize'])
         $scope.mapStyle = {'height':'100%'};
     }
     
-    $scope.jumpToArea = function(coordinate,name){     
-        // console.log(coordinate);
-        const pos = {
-            lat: coordinate[1],
-            lng: coordinate[0]
-        };
-        map.setCenter(pos);
-        map.setZoom(6);
-
-        //trigger poly click
+    $scope.jumpToArea = function(name){     
+        code = matchJsonToArea(name);
+        // console.log(code);
+        let bounds = new google.maps.LatLngBounds(); 
+        
+        //check the feature codename
         map.data.forEach(function(feature) {
-          if (feature.getProperty('name') === name) {
-              google.maps.event.trigger(map.data, 'click', {
-              feature: feature
+          if (feature.getProperty('name') === code) {
+            //zoom view to fit poly boundaries
+            feature.getGeometry().forEachLatLng(function(latlng){
+                bounds.extend(latlng);
+            });
+            map.fitBounds(bounds);
+            //trigger click on area polygon
+            google.maps.event.trigger(map.data, 'click', {
+                feature: feature
             });
           }
         });
     }
-});
+
+}); //end of controller
 
 
 //get json file add to map from jquery
@@ -256,14 +260,21 @@ const apiGeolocationSuccess = function(position) {
     zoomCenter(position);
 };
 
+//convert A.1 -> A.01
 function matchAreaToJson(str){
     let arrcode = str.split('.');
     let codenum = parseInt(arrcode[1]);
     return arrcode[0]+'.'+pad(codenum);
 }
-
 function pad(n) {
     return (n < 10) ? ("0" + n) : n;
+}
+
+//convert A.01 -> A.1
+function matchJsonToArea(str){
+    let arrcode = str.split('.');
+    let codenum = parseInt(arrcode[1]);
+    return arrcode[0]+'.'+codenum;
 }
 
 function matchCuaca(str){
