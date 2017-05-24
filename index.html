@@ -103,35 +103,36 @@
 
                 <div class="col l4">
                     <div class="row">
-                        <div class="col s5">
+                        <div class="col s4">
                             <div class="center-align">
                                 <img src="{{dataArea.h.icon}}" class="responsive-img">
                                 <p><strong>{{dataArea.h.cuaca}}</strong></p>
                             </div>                                               
                         </div>
-                        <div class="col s7">
+                        <div class="col s8">
                             <h5 class="center-align">{{area.desc}}</h5>
+                            <!--waves wind speed info-->
+                            <div class="col l4 wave-wind-info">
+                                <div class="row center-align wind-info">
+                                    <div class="col s4">
+                                        <img src="assets/weather/waves.svg" class="responsive-img">
+                                        <p>{{dataArea.h.gelombang_min}} - {{dataArea.h.gelombang_max}} m</p>
+                                    </div>
+                                    <div class="col s4">
+                                        <img src="assets/weather/wind.svg" class="responsive-img">
+                                        <p>{{dataArea.h.angin_speed_min}} - {{dataArea.h.angin_speed_max}} knot</p>
+                                    </div>
+                                    <div class="col s4">
+                                        <img src="assets/weather/navigation.svg" class="responsive-img">
+                                        <p>{{dataArea.h.angin_to}}</p>
+                                    </div>
+                                </div>
+                            </div><!--/col l4-->
                         </div>
                     </div>
                 </div><!--/col l4-->
 
-                <!--waves wind speed info-->
-                <div class="col l4">
-                    <div class="row center-align wind-info">
-                        <div class="col s4">
-                            <img src="assets/weather/waves.svg" class="responsive-img">
-                            <p>{{dataArea.h.gelombang_min}} - {{dataArea.h.gelombang_max}} m</p>
-                        </div>
-                        <div class="col s4">
-                            <img src="assets/weather/wind.svg" class="responsive-img">
-                            <p>{{dataArea.h.angin_speed_min}} - {{dataArea.h.angin_speed_max}} knot</p>
-                        </div>
-                        <div class="col s4">
-                            <img src="assets/weather/navigation.svg" class="responsive-img">
-                            <p>{{dataArea.h.angin_to}}</p>
-                        </div>
-                    </div>
-                </div><!--/col l4-->
+
             </div><!--/row-->      
 
             <div class="content">
@@ -166,32 +167,31 @@
 
                 <div class="col l4">
                     <div class="row">
-                        <div class="col s5">
+                        <div class="col s4">
                             <div class="center-align">
                                 <img src="{{dataArea.h1.icon}}" class="responsive-img">
                                 <p><strong>{{dataArea.h1.cuaca}}</strong></p>
                             </div>                                               
                         </div>
-                        <div class="col s7">
+                        <div class="col s8">
                             <h5 class="center-align">{{area.desc}}</h5>
-                        </div>
-                    </div>
-                </div><!--/col l4-->
-
-                <!--waves wind speed info-->
-                <div class="col l4">
-                    <div class="row center-align wind-info">
-                        <div class="col s4">
-                            <img src="assets/weather/waves.svg" class="responsive-img">
-                            <p>{{dataArea.h1.gelombang_min}} - {{dataArea.h1.gelombang_max}} m</p>
-                        </div>
-                        <div class="col s4">
-                            <img src="assets/weather/wind.svg" class="responsive-img">
-                            <p>{{dataArea.h1.angin_speed_min}} - {{dataArea.h1.angin_speed_max}} knot</p>
-                        </div>
-                        <div class="col s4">
-                            <img src="assets/weather/navigation.svg" class="responsive-img">
-                            <p>{{dataArea.h1.angin_to}}</p>
+                            <!--waves wind speed info-->
+                            <div class="col l4 wave-wind-info">
+                                <div class="row center-align wind-info">
+                                    <div class="col s4">
+                                        <img src="assets/weather/waves.svg" class="responsive-img">
+                                        <p>{{dataArea.h1.gelombang_min}} - {{dataArea.h1.gelombang_max}} m</p>
+                                    </div>
+                                    <div class="col s4">
+                                        <img src="assets/weather/wind.svg" class="responsive-img">
+                                        <p>{{dataArea.h1.angin_speed_min}} - {{dataArea.h1.angin_speed_max}} knot</p>
+                                    </div>
+                                    <div class="col s4">
+                                        <img src="assets/weather/navigation.svg" class="responsive-img">
+                                        <p>{{dataArea.h1.angin_to}}</p>
+                                    </div>
+                                </div>
+                            </div><!--/col l4-->
                         </div>
                     </div>
                 </div><!--/col l4-->
@@ -229,32 +229,31 @@
 
                 <div class="col l4">
                     <div class="row">
-                        <div class="col s5">
+                        <div class="col s4">
                             <div class="center-align">
                                 <img src="{{dataArea.h2.icon}}" class="responsive-img">                                
                                 <p><strong>{{dataArea.h2.cuaca}}</strong></p>
                             </div>                                               
                         </div>
-                        <div class="col s7">
+                        <div class="col s8">
                             <h5 class="center-align">{{area.desc}}</h5>
-                        </div>
-                    </div>
-                </div><!--/col l4-->
-
-                <!--waves wind speed info-->
-                <div class="col l4">
-                    <div class="row center-align wind-info">
-                        <div class="col s4">
-                            <img src="assets/weather/waves.svg" class="responsive-img">
-                            <p>{{dataArea.h2.gelombang_min}} - {{dataArea.h2.gelombang_max}} m</p>
-                        </div>
-                        <div class="col s4">
-                            <img src="assets/weather/wind.svg" class="responsive-img">
-                            <p>{{dataArea.h2.angin_speed_min}} - {{dataArea.h2.angin_speed_max}} knot</p>
-                        </div>
-                        <div class="col s4">
-                            <img src="assets/weather/navigation.svg" class="responsive-img">
-                            <p>{{dataArea.h2.angin_to}}</p>
+                            <!--waves wind speed info-->
+                            <div class="col l4 wave-wind-info">
+                                <div class="row center-align wind-info">
+                                    <div class="col s4">
+                                        <img src="assets/weather/waves.svg" class="responsive-img">
+                                        <p>{{dataArea.h2.gelombang_min}} - {{dataArea.h2.gelombang_max}} m</p>
+                                    </div>
+                                    <div class="col s4">
+                                        <img src="assets/weather/wind.svg" class="responsive-img">
+                                        <p>{{dataArea.h2.angin_speed_min}} - {{dataArea.h2.angin_speed_max}} knot</p>
+                                    </div>
+                                    <div class="col s4">
+                                        <img src="assets/weather/navigation.svg" class="responsive-img">
+                                        <p>{{dataArea.h2.angin_to}}</p>
+                                    </div>
+                                </div>
+                            </div><!--/col l4-->
                         </div>
                     </div>
                 </div><!--/col l4-->
@@ -292,32 +291,31 @@
 
                 <div class="col l4">
                     <div class="row">
-                        <div class="col s5">
+                        <div class="col s4">
                             <div class="center-align">
                                 <img src="{{dataArea.h3.icon}}" class="responsive-img">                                                                
                                 <p><strong>{{dataArea.h3.cuaca}}</strong></p>
                             </div>                                               
                         </div>
-                        <div class="col s7">
+                        <div class="col s8">
                             <h5 class="center-align">{{area.desc}}</h5>
-                        </div>
-                    </div>
-                </div><!--/col l4-->
-
-                <!--waves wind speed info-->
-                <div class="col l4">
-                    <div class="row center-align wind-info">
-                        <div class="col s4">
-                            <img src="assets/weather/waves.svg" class="responsive-img">
-                            <p>{{dataArea.h3.gelombang_min}} - {{dataArea.h3.gelombang_max}} m</p>
-                        </div>
-                        <div class="col s4">
-                            <img src="assets/weather/wind.svg" class="responsive-img">
-                            <p>{{dataArea.h3.angin_speed_min}} - {{dataArea.h3.angin_speed_max}} knot</p>
-                        </div>
-                        <div class="col s4">
-                            <img src="assets/weather/navigation.svg" class="responsive-img">
-                            <p>{{dataArea.h3.angin_to}}</p>
+                            <!--waves wind speed info-->
+                            <div class="col l4 wave-wind-info">
+                                <div class="row center-align wind-info">
+                                    <div class="col s4">
+                                        <img src="assets/weather/waves.svg" class="responsive-img">
+                                        <p>{{dataArea.h3.gelombang_min}} - {{dataArea.h3.gelombang_max}} m</p>
+                                    </div>
+                                    <div class="col s4">
+                                        <img src="assets/weather/wind.svg" class="responsive-img">
+                                        <p>{{dataArea.h3.angin_speed_min}} - {{dataArea.h3.angin_speed_max}} knot</p>
+                                    </div>
+                                    <div class="col s4">
+                                        <img src="assets/weather/navigation.svg" class="responsive-img">
+                                        <p>{{dataArea.h3.angin_to}}</p>
+                                    </div>
+                                </div>
+                            </div><!--/col l4-->
                         </div>
                     </div>
                 </div><!--/col l4-->

@@ -110,7 +110,7 @@ angular.module('app', ['ngSanitize','angular.filter'])
             //opened detail
             $scope.detailBar = {'height':'100%'};
             $('.detail').addClass('overflow');
-            $scope.detailBtnTxt = "Lihat Wilayah Perairan";
+            $scope.detailBtnTxt = "Tampilkan Wilayah Perairan";
             $scope.areaName = true;
 
             //get detail from api
@@ -142,7 +142,7 @@ angular.module('app', ['ngSanitize','angular.filter'])
                     $scope.dataArea.h2.icon = matchCuaca($scope.dataArea.h2.cuaca);
                     $scope.dataArea.h3.icon = matchCuaca($scope.dataArea.h3.cuaca);
                     
-                    // console.log($scope.dataArea);
+                    // console.log($scope.dataArea.h.icon);
                 });  
             }).done(function(){
                 // console.log('selesai');
@@ -278,6 +278,7 @@ function matchJsonToArea(str){
 }
 
 function matchCuaca(str){
+    // console.log(str);
     if(str!=null){
         var string = str,
         substring = "ujan";
