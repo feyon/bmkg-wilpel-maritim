@@ -114,16 +114,28 @@ angular.module('app', ['ngSanitize','angular.filter'])
             $scope.areaName = true;
 
             //get province from mapping.json
-            $.getJSON("assets/area/mapping.json", function(data){  
+            $.getJSON("assets/area/mapping.json", function(data){
+                var areasekitar = [];
                 for(var i=0;i<data.length;i++){
+                    var province;
+                    //get region / province
                     if(data[i].kode==codearea){
-                        var province = data[i].propinsi;
+                        province = data[i].propinsi;
                         $scope.$apply(function(){
                             $scope.area.province = province;
                         });
                     }
-                    
+                    //create area sekitar
+                    if(data[i].propinsi==province){
+                        var area = {
+                            'kode':data[i].kode,
+                            'nama':data[i].nama
+                        }
+                        areasekitar.push(area);
+                    }
                 }
+                console.log(areasekitar);
+                
             });
             
 

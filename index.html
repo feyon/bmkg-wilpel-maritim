@@ -29,7 +29,11 @@
             <li>
                 <ul class="collapsible collapsible-accordion">
                     <li ng-repeat="(key,value) in arealist | orderBy:'kode' | filter:searchArea | groupBy:'propinsi'">
-                        <a class="collapsible-header waves-effect waves-teal">{{key | cut:true:30:'...'}}</a>
+                        <a class="collapsible-header waves-effect waves-teal">
+                            <img src="assets/icon_provinsi/{{value[0].icon_propinsi}}" width="25" style="vertical-align:middle;">
+                                <span class="propinsi">{{key | cut:true:30:'...'}}</span>
+                                <span style="float:right">&#10093;</span>
+                            </a>
                         <div class="collapsible-body">
                             <ul>
                                 <li ng-repeat="area in value | orderBy:'kode'">
