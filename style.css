@@ -145,6 +145,10 @@ nav .brand-logo{
     margin-top: 10px;
 }
 
+.detail-content p{
+    padding: 3px;
+}
+
 .kondisi{
     padding: 10px;
     min-height: 130px;
@@ -172,4 +176,15 @@ p.small{
 .wave-wind-info{
     padding: 0 !important;
     font-size: 9pt;
+}
+.wind-info .s4{
+    min-height: 80px;
+}
+h5.area-name{
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+}
+p.province{
+    text-align: center;
+    font-size: 12pt;
 }

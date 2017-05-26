@@ -113,6 +113,20 @@ angular.module('app', ['ngSanitize','angular.filter'])
             $scope.detailBtnTxt = "Tampilkan Wilayah Perairan";
             $scope.areaName = true;
 
+            //get province from mapping.json
+            $.getJSON("assets/area/mapping.json", function(data){  
+                for(var i=0;i<data.length;i++){
+                    if(data[i].kode==codearea){
+                        var province = data[i].propinsi;
+                        $scope.$apply(function(){
+                            $scope.area.province = province;
+                        });
+                    }
+                    
+                }
+            });
+            
+
             //get detail from api
             $.getJSON(url,function(data){
                 // console.log('Loading..');                
@@ -141,6 +155,22 @@ angular.module('app', ['ngSanitize','angular.filter'])
                     $scope.dataArea.h1.icon = matchCuaca($scope.dataArea.h1.cuaca);
                     $scope.dataArea.h2.icon = matchCuaca($scope.dataArea.h2.cuaca);
                     $scope.dataArea.h3.icon = matchCuaca($scope.dataArea.h3.cuaca);
+
+                    $scope.dataArea.h.angin_to = matchArahAngin($scope.dataArea.h.angin_to);
+                    $scope.dataArea.h1.angin_to = matchArahAngin($scope.dataArea.h1.angin_to);
+                    $scope.dataArea.h2.angin_to = matchArahAngin($scope.dataArea.h2.angin_to);
+                    $scope.dataArea.h3.angin_to = matchArahAngin($scope.dataArea.h3.angin_to);
+
+                    $scope.dataArea.h.valid_from = dateStringToFormat($scope.dataArea.h.valid_from);
+                    $scope.dataArea.h1.valid_from = dateStringToFormat($scope.dataArea.h1.valid_from);
+                    $scope.dataArea.h2.valid_from = dateStringToFormat($scope.dataArea.h2.valid_from);
+                    $scope.dataArea.h3.valid_from = dateStringToFormat($scope.dataArea.h3.valid_from);
+
+                    $scope.dataArea.h.valid_to = dateStringToFormat($scope.dataArea.h.valid_to);
+                    $scope.dataArea.h1.valid_to = dateStringToFormat($scope.dataArea.h1.valid_to);
+                    $scope.dataArea.h2.valid_to = dateStringToFormat($scope.dataArea.h2.valid_to);
+                    $scope.dataArea.h3.valid_to = dateStringToFormat($scope.dataArea.h3.valid_to);
+                    
                     
                     // console.log($scope.dataArea.h.icon);
                 });  
@@ -290,4 +320,58 @@ function matchCuaca(str){
     }else{
         return 'assets/weather/clouds.svg';
     }
+}
+
+function matchArahAngin(str){
+    switch(str){
+        case 'Utara':
+            var angin = 'N';
+            break;
+        case 'Timur Laut':
+            var angin = 'NE';
+            break;
+        case 'Timur':
+            var angin = 'E';
+            break;
+        case 'Tenggara':
+            var angin = 'SE';
+            break;
+        case 'Selatan':
+            var angin = 'S';
+            break;
+        case 'Barat Daya':
+            var angin = 'SW';
+            break;
+        case 'Barat':
+            var angin = 'W';
+            break;   
+        case 'Barat Laut':
+            var angin = 'NW';
+            break;            
+    }
+    return angin;
+}
+
+function dateStringToFormat(str){
+    var dateArr = str.split(" ");
+    var iso_date = dateArr[0]+'T'+dateArr[1];
+    var date = new Date(iso_date);
+
+    var monthId = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+    var d = date.getDate();
+    var M = monthId[date.getMonth()];
+    var Y = date.getFullYear();
+    if(date.getHours()<10){
+        var H = '0'+date.getHours();
+    }else{
+        var H = date.getHours();
+    }
+
+    if(date.getMinutes()<10){
+        var m = '0'+date.getMinutes();
+    }else{
+        var m = date.getMinutes();        
+    }
+    
+    return d+' '+M+' '+Y+' pukul '+H+'.'+m;
 }
