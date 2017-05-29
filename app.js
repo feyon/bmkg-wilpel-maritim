@@ -125,17 +125,33 @@ angular.module('app', ['ngSanitize','angular.filter'])
                             $scope.area.province = province;
                         });
                     }
+
                     //create area sekitar
-                    if(data[i].propinsi==province){
-                        var area = {
+                    if(data[i].propinsi==province && data[i].kode != codearea){
+                        const url_sekitar = 'http://maritim.bmkg.go.id/xml/wilayah_pelayanan/prakiraan?kode='+data[i].kode+'&format=json';
+                        //get detail from api
+                        var area;
+                        area = {
                             'kode':data[i].kode,
-                            'nama':data[i].nama
+                            'nama':data[i].nama                                
                         }
+                        //get waves of nearby area
+                        $.getJSON(url_sekitar,function(area_sekitar){
+                            console.log(area_sekitar);
+                            // area[i].gel_max = area_sekitar.kategoris[0].gelombang_max;
+                            // area[i].gel_min = area_sekitar.kategoris[0].gelombang_min; 
+                        }).done(function(){
+                            // console.log(area);
+                        });
+                        
                         areasekitar.push(area);
+                        
                     }
                 }
+                 $scope.$apply(function(){
+                    $scope.areasekitar = areasekitar.slice(0,4);
+                });
                 console.log(areasekitar);
-                
             });
             
 
@@ -184,7 +200,7 @@ angular.module('app', ['ngSanitize','angular.filter'])
                     $scope.dataArea.h3.valid_to = dateStringToFormat($scope.dataArea.h3.valid_to);
                     
                     
-                    // console.log($scope.dataArea.h.icon);
+                    // console.log(obj);
                 });  
             }).done(function(){
                 // console.log('selesai');

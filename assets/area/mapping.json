@@ -3,1020 +3,1190 @@
     "kode": "A.01",
     "nama": "Selat Malaka bagian utara",
     "propinsi": "Aceh",
-    "icon_propinsi": "aceh.png"
+    "icon_propinsi": "aceh.png",
+    "order": 0
   },
   {
     "kode": "A.02",
     "nama": "Perairan Lhokseumawe",
     "propinsi": "Aceh",
-    "icon_propinsi": "aceh.png"
+    "icon_propinsi": "aceh.png",
+    "order": 0
   },
   {
     "kode": "A.03",
     "nama": "Perairan Sabang - Banda Aceh",
     "propinsi": "Aceh",
-    "icon_propinsi": "aceh.png"
+    "icon_propinsi": "aceh.png",
+    "order": 0
   },
   {
     "kode": "A.04",
     "nama": "Perairan barat Aceh",
     "propinsi": "Aceh",
-    "icon_propinsi": "aceh.png"
+    "icon_propinsi": "aceh.png",
+    "order": 0
   },
   {
     "kode": "A.05",
     "nama": "Samudera Hindia barat Aceh",
     "propinsi": "Aceh",
-    "icon_propinsi": "aceh.png"
+    "icon_propinsi": "aceh.png",
+    "order": 0
   },
   {
     "kode": "A.06",
     "nama": "Selat Malaka bagian tengah",
     "propinsi": "Aceh",
-    "icon_propinsi": "aceh.png"
-  },
-  {
-    "kode": "S.04",
-    "nama": "Laut Banda timur Sulawesi Tenggara",
-    "propinsi": "Ambon",
-    "icon_propinsi": "ambon.jpeg"
-  },
-  {
-    "kode": "I.07",
-    "nama": "Perairan Kepulauan Kangean",
-    "propinsi": "Bali",
-    "icon_propinsi": "bali.png"
-  },
-  {
-    "kode": "J.01",
-    "nama": "Laut Bali",
-    "propinsi": "Bali",
-    "icon_propinsi": "bali.png"
-  },
-  {
-    "kode": "J.02",
-    "nama": "Selat Bali bagian utara",
-    "propinsi": "Bali",
-    "icon_propinsi": "bali.png"
-  },
-  {
-    "kode": "J.03",
-    "nama": "Selat Bali bagian selatan",
-    "propinsi": "Bali",
-    "icon_propinsi": "bali.png"
-  },
-  {
-    "kode": "J.04",
-    "nama": "Selat Badung",
-    "propinsi": "Bali",
-    "icon_propinsi": "bali.png"
-  },
-  {
-    "kode": "J.05",
-    "nama": "Samudera Hindia selatan Bali",
-    "propinsi": "Bali",
-    "icon_propinsi": "bali.png"
-  },
-  {
-    "kode": "J.06",
-    "nama": "Selat Lombok bagian utara",
-    "propinsi": "Bali",
-    "icon_propinsi": "bali.png"
-  },
-  {
-    "kode": "J.07",
-    "nama": "Selat Lombok bagian selatan",
-    "propinsi": "Bali",
-    "icon_propinsi": "bali.png"
-  },
-  {
-    "kode": "M.02",
-    "nama": "Perairan Balikpapan",
-    "propinsi": "Balikpapan",
-    "icon_propinsi": "balikpapan.jpg"
-  },
-  {
-    "kode": "D.07",
-    "nama": "Selat Karimata bagian utara",
-    "propinsi": "Bangka Belitung",
-    "icon_propinsi": "bangka-belitung.png"
-  },
-  {
-    "kode": "E.03",
-    "nama": "Selat Berhala",
-    "propinsi": "Bangka Belitung",
-    "icon_propinsi": "bangka-belitung.png"
-  },
-  {
-    "kode": "F.01",
-    "nama": "Perairan utara Pangkal Pinang",
-    "propinsi": "Bangka Belitung",
-    "icon_propinsi": "bangka-belitung.png"
-  },
-  {
-    "kode": "F.02",
-    "nama": "Selat Gelasa",
-    "propinsi": "Bangka Belitung",
-    "icon_propinsi": "bangka-belitung.png"
-  },
-  {
-    "kode": "F.03",
-    "nama": "Selat Bangka bagian utara",
-    "propinsi": "Bangka Belitung",
-    "icon_propinsi": "bangka-belitung.png"
-  },
-  {
-    "kode": "F.04",
-    "nama": "Selat Bangka bagian selatan",
-    "propinsi": "Bangka Belitung",
-    "icon_propinsi": "bangka-belitung.png"
-  },
-  {
-    "kode": "F.05",
-    "nama": "Selat Karimata bagian selatan",
-    "propinsi": "Bangka Belitung",
-    "icon_propinsi": "bangka-belitung.png"
-  },
-  {
-    "kode": "C.03",
-    "nama": "Selat Sunda bagian utara",
-    "propinsi": "Banten",
-    "icon_propinsi": "banten.png"
-  },
-  {
-    "kode": "C.04",
-    "nama": "Selat Sunda bagian selatan",
-    "propinsi": "Banten",
-    "icon_propinsi": "banten.png"
-  },
-  {
-    "kode": "F.06",
-    "nama": "Laut Jawa bagian barat",
-    "propinsi": "Banten",
-    "icon_propinsi": "banten.png"
-  },
-  {
-    "kode": "F.07",
-    "nama": "Perairan Kep. Seribu",
-    "propinsi": "Banten",
-    "icon_propinsi": "banten.png"
-  },
-  {
-    "kode": "F.11",
-    "nama": "Perairan selatan Banten",
-    "propinsi": "Banten",
-    "icon_propinsi": "banten.png"
-  },
-  {
-    "kode": "F.12",
-    "nama": "Samudera Hindia selatan Banten",
-    "propinsi": "Banten",
-    "icon_propinsi": "banten.png"
-  },
-  {
-    "kode": "B.03",
-    "nama": "Perairan Bengkulu",
-    "propinsi": "Bengkulu",
-    "icon_propinsi": "bengkulu.png"
-  },
-  {
-    "kode": "B.04",
-    "nama": "Samudera Hindia barat Bengkulu",
-    "propinsi": "Bengkulu",
-    "icon_propinsi": "bengkulu.png"
-  },
-  {
-    "kode": "H.01",
-    "nama": "Perairan selatan Jawa Tengah",
-    "propinsi": "D.I.Yogyakarta",
-    "icon_propinsi": "yogyakarta.png"
-  },
-  {
-    "kode": "H.02",
-    "nama": "Samudera Hindia selatan Jawa Tengah",
-    "propinsi": "D.I.Yogyakarta",
-    "icon_propinsi": "yogyakarta.png"
-  },
-  {
-    "kode": "F.06",
-    "nama": "Laut Jawa bagian barat",
-    "propinsi": "DKI Jakarta",
-    "icon_propinsi": "jakarta.png"
-  },
-  {
-    "kode": "F.07",
-    "nama": "Perairan Kep. Seribu",
-    "propinsi": "DKI Jakarta",
-    "icon_propinsi": "jakarta.png"
-  },
-  {
-    "kode": "F.08",
-    "nama": "Perairan utara Jawa Barat",
-    "propinsi": "DKI Jakarta",
-    "icon_propinsi": "jakarta.png"
-  },
-  {
-    "kode": "N.05",
-    "nama": "Teluk Tomini selatan Gorontalo",
-    "propinsi": "Gorontalo",
-    "icon_propinsi": "gorontalo.jpg"
-  },
-  {
-    "kode": "F.01",
-    "nama": "Perairan utara Pangkal Pinang",
-    "propinsi": "Jambi",
-    "icon_propinsi": "jambi.png"
-  },
-  {
-    "kode": "F.02",
-    "nama": "Selat Gelasa",
-    "propinsi": "Jambi",
-    "icon_propinsi": "jambi.png"
-  },
-  {
-    "kode": "F.03",
-    "nama": "Selat Bangka bagian utara",
-    "propinsi": "Jambi",
-    "icon_propinsi": "jambi.png"
-  },
-  {
-    "kode": "F.04",
-    "nama": "Selat Bangka bagian selatan",
-    "propinsi": "Jambi",
-    "icon_propinsi": "jambi.png"
-  },
-  {
-    "kode": "F.08",
-    "nama": "Perairan utara Jawa Barat",
-    "propinsi": "Jawa Barat",
-    "icon_propinsi": "jawa-barat.png"
-  },
-  {
-    "kode": "F.10",
-    "nama": "Samudera Hindia selatan Jawa Barat",
-    "propinsi": "Jawa Barat",
-    "icon_propinsi": "jawa-barat.png"
-  },
-  {
-    "kode": "G.02",
-    "nama": "Laut Jawa bagian tengah",
-    "propinsi": "Jawa Tengah",
-    "icon_propinsi": "jawa-tengah.png"
-  },
-  {
-    "kode": "G.03",
-    "nama": "Perairan Kep. Karimun Jawa",
-    "propinsi": "Jawa Tengah",
-    "icon_propinsi": "jawa-tengah.png"
-  },
-  {
-    "kode": "G.04",
-    "nama": "Perairan utara Jawa Tengah",
-    "propinsi": "Jawa Tengah",
-    "icon_propinsi": "jawa-tengah.png"
-  },
-  {
-    "kode": "I.01",
-    "nama": "Laut Jawa bagian timur",
-    "propinsi": "Jawa Timur",
-    "icon_propinsi": "jawa-timur.png"
-  },
-  {
-    "kode": "I.02",
-    "nama": "Perairan Kepulauan Masalembu",
-    "propinsi": "Jawa Timur",
-    "icon_propinsi": "jawa-timur.png"
-  },
-  {
-    "kode": "I.03",
-    "nama": "Perairan Pulau Bawean",
-    "propinsi": "Jawa Timur",
-    "icon_propinsi": "jawa-timur.png"
-  },
-  {
-    "kode": "I.04",
-    "nama": "Perairan utara Jawa Timur",
-    "propinsi": "Jawa Timur",
-    "icon_propinsi": "jawa-timur.png"
-  },
-  {
-    "kode": "I.05",
-    "nama": "Perairan Gresik",
-    "propinsi": "Jawa Timur",
-    "icon_propinsi": "jawa-timur.png"
-  },
-  {
-    "kode": "I.06",
-    "nama": "Selat Madura",
-    "propinsi": "Jawa Timur",
-    "icon_propinsi": "jawa-timur.png"
-  },
-  {
-    "kode": "I.08",
-    "nama": "Perairan Selatan Jawa Timur",
-    "propinsi": "Jawa Timur",
-    "icon_propinsi": "jawa-timur.png"
-  },
-  {
-    "kode": "I.09",
-    "nama": "Samudera Hindia selatan Jawa Timur",
-    "propinsi": "Jawa Timur",
-    "icon_propinsi": "jawa-timur.png"
-  },
-  {
-    "kode": "J.02",
-    "nama": "Selat Bali bagian utara",
-    "propinsi": "Jawa Timur",
-    "icon_propinsi": "jawa-timur.png"
-  },
-  {
-    "kode": "J.03",
-    "nama": "Selat Bali bagian selatan",
-    "propinsi": "Jawa Timur",
-    "icon_propinsi": "jawa-timur.png"
-  },
-  {
-    "kode": "D.05",
-    "nama": "Perairan Singkawang",
-    "propinsi": "Kalimantan Barat",
-    "icon_propinsi": "kalimantan-barat.png"
-  },
-  {
-    "kode": "D.06",
-    "nama": "Perairan Pontianak",
-    "propinsi": "Kalimantan Barat",
-    "icon_propinsi": "kalimantan-barat.png"
-  },
-  {
-    "kode": "D.07",
-    "nama": "Selat Karimata bagian utara",
-    "propinsi": "Kalimantan Barat",
-    "icon_propinsi": "kalimantan-barat.png"
-  },
-  {
-    "kode": "F.05",
-    "nama": "Selat Karimata bagian selatan",
-    "propinsi": "Kalimantan Barat",
-    "icon_propinsi": "kalimantan-barat.png"
-  },
-  {
-    "kode": "L.01",
-    "nama": "Selat Makassar bagian selatan",
-    "propinsi": "Kalimantan Selatan",
-    "icon_propinsi": "kalimantan-selatan.gif"
-  },
-  {
-    "kode": "M.01",
-    "nama": "Perairan Kotabaru",
-    "propinsi": "Kalimantan Selatan",
-    "icon_propinsi": "kalimantan-selatan.gif"
-  },
-  {
-    "kode": "G.01",
-    "nama": "Perairan selatan Kalimantan Tengah",
-    "propinsi": "Kalimantan Tengah",
-    "icon_propinsi": "kalimantan-tengah.jpg"
-  },
-  {
-    "kode": "G.02",
-    "nama": "Laut Jawa bagian tengah",
-    "propinsi": "Kalimantan Tengah",
-    "icon_propinsi": "kalimantan-tengah.jpg"
-  },
-  {
-    "kode": "M.03",
-    "nama": "Selat Makassar bagian tengah",
-    "propinsi": "Kalimantan Timur",
-    "icon_propinsi": "kalimantan-timur.png"
-  },
-  {
-    "kode": "M.04",
-    "nama": "Selat Makassar bagian utara",
-    "propinsi": "Kalimantan Timur",
-    "icon_propinsi": "kalimantan-timur.png"
-  },
-  {
-    "kode": "D.01",
-    "nama": "Laut China Selatan utara Natuna",
-    "propinsi": "Kep. Riau",
-    "icon_propinsi": "riau-kep.jpeg"
-  },
-  {
-    "kode": "D.02",
-    "nama": "Perairan Kep. Natuna",
-    "propinsi": "Kep. Riau",
-    "icon_propinsi": "riau-kep.jpeg"
-  },
-  {
-    "kode": "D.03",
-    "nama": "Perairan Kep. Anambas",
-    "propinsi": "Kep. Riau",
-    "icon_propinsi": "riau-kep.jpeg"
-  },
-  {
-    "kode": "D.04",
-    "nama": "Laut Natuna",
-    "propinsi": "Kep. Riau",
-    "icon_propinsi": "riau-kep.jpeg"
-  },
-  {
-    "kode": "E.01",
-    "nama": "Perairan Batam - Bintan",
-    "propinsi": "Kep. Riau",
-    "icon_propinsi": "riau-kep.jpeg"
-  },
-  {
-    "kode": "E.02",
-    "nama": "Perairan Kepulauan Lingga",
-    "propinsi": "Kep. Riau",
-    "icon_propinsi": "riau-kep.jpeg"
-  },
-  {
-    "kode": "E.03",
-    "nama": "Selat Berhala",
-    "propinsi": "Kep. Riau",
-    "icon_propinsi": "riau-kep.jpeg"
-  },
-  {
-    "kode": "C.01",
-    "nama": "Perairan barat Lampung",
-    "propinsi": "Lampung",
-    "icon_propinsi": "lampung.png"
-  },
-  {
-    "kode": "C.02",
-    "nama": "Samudera Hindia barat Lampung",
-    "propinsi": "Lampung",
-    "icon_propinsi": "lampung.png"
-  },
-  {
-    "kode": "C.03",
-    "nama": "Selat Sunda bagian utara",
-    "propinsi": "Lampung",
-    "icon_propinsi": "lampung.png"
-  },
-  {
-    "kode": "C.04",
-    "nama": "Selat Sunda bagian selatan",
-    "propinsi": "Lampung",
-    "icon_propinsi": "lampung.png"
-  },
-  {
-    "kode": "C.05",
-    "nama": "Perairan timur Lampung",
-    "propinsi": "Lampung",
-    "icon_propinsi": "lampung.png"
-  },
-  {
-    "kode": "T.01",
-    "nama": "Laut Seram bagian barat",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "T.02",
-    "nama": "Laut Seram bagian timur",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "T.03",
-    "nama": "Perairan selatan Ambon",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "T.04",
-    "nama": "Laut Banda bagian utara",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "T.05",
-    "nama": "Laut Banda bagian selatan",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "T.06",
-    "nama": "Perairan Kepulauan Kai",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "T.07",
-    "nama": "Perairan Kepulauan Aru",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "T.08",
-    "nama": "Perairan Kepulauan Tanimbar",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "T.09",
-    "nama": "Perairan Kepulauan Babar",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "T.10",
-    "nama": "Perairan Kep. Sermata - Kep. Leti",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "T.11",
-    "nama": "Laut Arafuru bagian barat",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "T.12",
-    "nama": "Laut Arafuru bagian tengah",
-    "propinsi": "Maluku",
-    "icon_propinsi": "maluku.png"
-  },
-  {
-    "kode": "N.11",
-    "nama": "Laut Maluku bagian utara",
-    "propinsi": "Maluku Utara",
-    "icon_propinsi": "maluku-utara.png"
-  },
-  {
-    "kode": "N.12",
-    "nama": "Laut Maluku bagian selatan",
-    "propinsi": "Maluku Utara",
-    "icon_propinsi": "maluku-utara.png"
-  },
-  {
-    "kode": "O.01",
-    "nama": "Samudera Pasifik utara Kep. Halmahera",
-    "propinsi": "Maluku Utara",
-    "icon_propinsi": "maluku-utara.png"
-  },
-  {
-    "kode": "O.02",
-    "nama": "Laut Halmahera",
-    "propinsi": "Maluku Utara",
-    "icon_propinsi": "maluku-utara.png"
-  },
-  {
-    "kode": "O.03",
-    "nama": "Perairan utara Kep. Halmahera",
-    "propinsi": "Maluku Utara",
-    "icon_propinsi": "maluku-utara.png"
-  },
-  {
-    "kode": "O.04",
-    "nama": "Perairan timur Kep. Halmahera",
-    "propinsi": "Maluku Utara",
-    "icon_propinsi": "maluku-utara.png"
-  },
-  {
-    "kode": "O.05",
-    "nama": "Perairan barat Kep. Halmahera",
-    "propinsi": "Maluku Utara",
-    "icon_propinsi": "maluku-utara.png"
-  },
-  {
-    "kode": "S.07",
-    "nama": "Perairan Kepulauan Sula",
-    "propinsi": "Maluku Utara",
-    "icon_propinsi": "maluku-utara.png"
-  },
-  {
-    "kode": "T.01",
-    "nama": "Laut Seram bagian barat",
-    "propinsi": "Maluku Utara",
-    "icon_propinsi": "maluku-utara.png"
-  },
-  {
-    "kode": "T.02",
-    "nama": "Laut Seram bagian timur",
-    "propinsi": "Maluku Utara",
-    "icon_propinsi": "maluku-utara.png"
-  },
-  {
-    "kode": "J.06",
-    "nama": "Selat Lombok bagian utara",
-    "propinsi": "NTB",
-    "icon_propinsi": "ntb.png"
-  },
-  {
-    "kode": "J.07",
-    "nama": "Selat Lombok bagian selatan",
-    "propinsi": "NTB",
-    "icon_propinsi": "ntb.png"
-  },
-  {
-    "kode": "J.08",
-    "nama": "Selat Alas bagian utara",
-    "propinsi": "NTB",
-    "icon_propinsi": "ntb.png"
-  },
-  {
-    "kode": "J.09",
-    "nama": "Selat Alas bagian selatan",
-    "propinsi": "NTB",
-    "icon_propinsi": "ntb.png"
-  },
-  {
-    "kode": "J.10",
-    "nama": "Laut Sumbawa",
-    "propinsi": "NTB",
-    "icon_propinsi": "ntb.png"
-  },
-  {
-    "kode": "J.11",
-    "nama": "Perairan utara Sumbawa",
-    "propinsi": "NTB",
-    "icon_propinsi": "ntb.png"
-  },
-  {
-    "kode": "J.12",
-    "nama": "Perairan selatan Sumbawa",
-    "propinsi": "NTB",
-    "icon_propinsi": "ntb.png"
-  },
-  {
-    "kode": "J.13",
-    "nama": "Samudera Hindia selatan NTB",
-    "propinsi": "NTB",
-    "icon_propinsi": "ntb.png"
-  },
-  {
-    "kode": "K.01",
-    "nama": "Selat Sape",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.02",
-    "nama": "Perairan utara Flores",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.03",
-    "nama": "Selat Flores",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.04",
-    "nama": "Selat Lamakera - Selat Boling",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.05",
-    "nama": "Selat Alor",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.06",
-    "nama": "Selat Sumba",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.07",
-    "nama": "Laut Sawu",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.08",
-    "nama": "Selat Ombai",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.09",
-    "nama": "Selat Wetar",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.10",
-    "nama": "Perairan selatan P. Sumba",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.11",
-    "nama": "Samudera Hindia selatan NTT",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.12",
-    "nama": "Perairan selatan Kupang - Pulau Rote",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.13",
-    "nama": "Laut Timor selatan NTT",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "K.14",
-    "nama": "Laut Timor selatan Timor Leste",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "L.07",
-    "nama": "Laut Flores",
-    "propinsi": "NTT",
-    "icon_propinsi": "ntt.png"
-  },
-  {
-    "kode": "P.04",
-    "nama": "Perairan Manokwari",
-    "propinsi": "Papua",
-    "icon_propinsi": "papua.png"
-  },
-  {
-    "kode": "Q.01",
-    "nama": "Samudera Pasifik utara Biak",
-    "propinsi": "Papua",
-    "icon_propinsi": "papua.png"
-  },
-  {
-    "kode": "Q.02",
-    "nama": "Perairan Biak",
-    "propinsi": "Papua",
-    "icon_propinsi": "papua.png"
-  },
-  {
-    "kode": "Q.03",
-    "nama": "Teluk Cendrawasih",
-    "propinsi": "Papua",
-    "icon_propinsi": "papua.png"
-  },
-  {
-    "kode": "Q.04",
-    "nama": "Samudera Pasifik utara Jayapura",
-    "propinsi": "Papua",
-    "icon_propinsi": "papua.png"
-  },
-  {
-    "kode": "Q.05",
-    "nama": "Perairan Jayapura - Sarmi",
-    "propinsi": "Papua",
-    "icon_propinsi": "papua.png"
-  },
-  {
-    "kode": "R.01",
-    "nama": "Perairan Amamapere - Agats",
-    "propinsi": "Papua",
-    "icon_propinsi": "papua.png"
-  },
-  {
-    "kode": "R.02",
-    "nama": "Perairan Yos Sudarso",
-    "propinsi": "Papua",
-    "icon_propinsi": "papua.png"
-  },
-  {
-    "kode": "R.03",
-    "nama": "Perairan Merauke",
-    "propinsi": "Papua",
-    "icon_propinsi": "papua.png"
-  },
-  {
-    "kode": "R.04",
-    "nama": "Laut Arafuru bagian timur",
-    "propinsi": "Papua",
-    "icon_propinsi": "papua.png"
-  },
-  {
-    "kode": "P.01",
-    "nama": "Samudera Pasifik utara Papua Barat",
-    "propinsi": "Papua Barat",
-    "icon_propinsi": "papua-barat.png"
-  },
-  {
-    "kode": "P.02",
-    "nama": "Perairan Raja Ampat - Sorong",
-    "propinsi": "Papua Barat",
-    "icon_propinsi": "papua-barat.png"
-  },
-  {
-    "kode": "P.03",
-    "nama": "Perairan Fak-fak - Kaimana",
-    "propinsi": "Papua Barat",
-    "icon_propinsi": "papua-barat.png"
-  },
-  {
-    "kode": "A.09",
-    "nama": "Perairan Riau",
-    "propinsi": "Riau",
-    "icon_propinsi": "riau.png"
-  },
-  {
-    "kode": "M.03",
-    "nama": "Selat Makassar bagian tengah",
-    "propinsi": "Sulawesi Barat",
-    "icon_propinsi": "sulawesi-barat.png"
-  },
-  {
-    "kode": "L.01",
-    "nama": "Selat Makassar bagian selatan",
-    "propinsi": "Sulawesi Selatan",
-    "icon_propinsi": "sulawesi-selatan.png"
-  },
-  {
-    "kode": "L.02",
-    "nama": "Perairan barat Sulawesi Selatan",
-    "propinsi": "Sulawesi Selatan",
-    "icon_propinsi": "sulawesi-selatan.png"
-  },
-  {
-    "kode": "L.03",
-    "nama": "Perairan Kepulauan Salabana",
-    "propinsi": "Sulawesi Selatan",
-    "icon_propinsi": "sulawesi-selatan.png"
-  },
-  {
-    "kode": "L.04",
-    "nama": "Perairan Kepulauan Selayar",
-    "propinsi": "Sulawesi Selatan",
-    "icon_propinsi": "sulawesi-selatan.png"
-  },
-  {
-    "kode": "L.05",
-    "nama": "Teluk Bone bagian utara",
-    "propinsi": "Sulawesi Selatan",
-    "icon_propinsi": "sulawesi-selatan.png"
-  },
-  {
-    "kode": "L.06",
-    "nama": "Teluk Bone bagian selatan",
-    "propinsi": "Sulawesi Selatan",
-    "icon_propinsi": "sulawesi-selatan.png"
-  },
-  {
-    "kode": "L.07",
-    "nama": "Laut Flores",
-    "propinsi": "Sulawesi Selatan",
-    "icon_propinsi": "sulawesi-selatan.png"
-  },
-  {
-    "kode": "M.04",
-    "nama": "Selat Makassar bagian utara",
-    "propinsi": "Sulawesi Tengah",
-    "icon_propinsi": "sulawesi-tengah.png"
-  },
-  {
-    "kode": "N.06",
-    "nama": "Teluk Tomini utara Poso",
-    "propinsi": "Sulawesi Tengah",
-    "icon_propinsi": "sulawesi-tengah.png"
-  },
-  {
-    "kode": "S.05",
-    "nama": "Teluk Tolo",
-    "propinsi": "Sulawesi Tengah",
-    "icon_propinsi": "sulawesi-tengah.png"
-  },
-  {
-    "kode": "S.06",
-    "nama": "Perairan Kepulauan Banggai",
-    "propinsi": "Sulawesi Tengah",
-    "icon_propinsi": "sulawesi-tengah.png"
-  },
-  {
-    "kode": "S.07",
-    "nama": "Perairan Kepulauan Sula",
-    "propinsi": "Sulawesi Tengah",
-    "icon_propinsi": "sulawesi-tengah.png"
-  },
-  {
-    "kode": "L.07",
-    "nama": "Laut Flores",
-    "propinsi": "Sulawesi Tenggara",
-    "icon_propinsi": "sulawesi-tenggara.png"
-  },
-  {
-    "kode": "S.01",
-    "nama": "Perairan Bau-bau",
-    "propinsi": "Sulawesi Tenggara",
-    "icon_propinsi": "sulawesi-tenggara.png"
-  },
-  {
-    "kode": "S.02",
-    "nama": "Perairan Kepulauan Wakatobi",
-    "propinsi": "Sulawesi Tenggara",
-    "icon_propinsi": "sulawesi-tenggara.png"
-  },
-  {
-    "kode": "S.03",
-    "nama": "Perairan Manui - Kendari",
-    "propinsi": "Sulawesi Tenggara",
-    "icon_propinsi": "sulawesi-tenggara.png"
-  },
-  {
-    "kode": "S.04",
-    "nama": "Laut Banda timur Sulawesi Tenggara",
-    "propinsi": "Sulawesi Tenggara",
-    "icon_propinsi": "sulawesi-tenggara.png"
-  },
-  {
-    "kode": "N.01",
-    "nama": "Perairan Kalimantan Utara",
-    "propinsi": "Sulawesi Utara",
-    "icon_propinsi": "sulawesi-utara.png"
-  },
-  {
-    "kode": "N.02",
-    "nama": "Laut Sulawesi bagian barat",
-    "propinsi": "Sulawesi Utara",
-    "icon_propinsi": "sulawesi-utara.png"
-  },
-  {
-    "kode": "N.03",
-    "nama": "Laut Sulawesi bagian tengah",
-    "propinsi": "Sulawesi Utara",
-    "icon_propinsi": "sulawesi-utara.png"
-  },
-  {
-    "kode": "N.04",
-    "nama": "Perairan utara Sulawesi",
-    "propinsi": "Sulawesi Utara",
-    "icon_propinsi": "sulawesi-utara.png"
-  },
-  {
-    "kode": "N.07",
-    "nama": "Laut Sulawesi bagian timur",
-    "propinsi": "Sulawesi Utara",
-    "icon_propinsi": "sulawesi-utara.png"
-  },
-  {
-    "kode": "N.08",
-    "nama": "Perairan Kepulauan Sangihe",
-    "propinsi": "Sulawesi Utara",
-    "icon_propinsi": "sulawesi-utara.png"
-  },
-  {
-    "kode": "N.09",
-    "nama": "Perairan Kepulauan Talaud",
-    "propinsi": "Sulawesi Utara",
-    "icon_propinsi": "sulawesi-utara.png"
-  },
-  {
-    "kode": "N.10",
-    "nama": "Perairan Bitung - Manado",
-    "propinsi": "Sulawesi Utara",
-    "icon_propinsi": "sulawesi-utara.png"
-  },
-  {
-    "kode": "N.11",
-    "nama": "Laut Maluku bagian utara",
-    "propinsi": "Sulawesi Utara",
-    "icon_propinsi": "sulawesi-utara.png"
-  },
-  {
-    "kode": "N.13",
-    "nama": "Perairan selatan Sulawesi Utara",
-    "propinsi": "Sulawesi Utara",
-    "icon_propinsi": "sulawesi-utara.png"
-  },
-  {
-    "kode": "B.01",
-    "nama": "Perairan Kepulauan Mentawai - Padang",
-    "propinsi": "Sumatera Barat",
-    "icon_propinsi": "sumatera-barat.png"
-  },
-  {
-    "kode": "B.02",
-    "nama": "Samudera Hindia barat Kep. Mentawai",
-    "propinsi": "Sumatera Barat",
-    "icon_propinsi": "sumatera-barat.png"
-  },
-  {
-    "kode": "F.02",
-    "nama": "Selat Gelasa",
-    "propinsi": "Sumatera Selatan",
-    "icon_propinsi": "sumatera-selatan.png"
+    "icon_propinsi": "aceh.png",
+    "order": 0
   },
   {
     "kode": "A.07",
     "nama": "Perairan Kep. Nias - Sibolga",
     "propinsi": "Sumatera Utara",
-    "icon_propinsi": "sumatera-utara.png"
+    "icon_propinsi": "sumatera-utara.png",
+    "order": 1
   },
   {
     "kode": "A.08",
     "nama": "Samudera Hindia barat Kep. Nias",
     "propinsi": "Sumatera Utara",
-    "icon_propinsi": "sumatera-utara.png"
+    "icon_propinsi": "sumatera-utara.png",
+    "order": 1
+  },
+  {
+    "kode": "B.01",
+    "nama": "Perairan Kepulauan Mentawai - Padang",
+    "propinsi": "Sumatera Barat",
+    "icon_propinsi": "sumatera-barat.png",
+    "order": 2
+  },
+  {
+    "kode": "B.02",
+    "nama": "Samudera Hindia barat Kep. Mentawai",
+    "propinsi": "Sumatera Barat",
+    "icon_propinsi": "sumatera-barat.png",
+    "order": 2
+  },
+  {
+    "kode": "A.09",
+    "nama": "Perairan Riau",
+    "propinsi": "Riau",
+    "icon_propinsi": "riau.png",
+    "order": 3
+  },
+  {
+    "kode": "D.01",
+    "nama": "Laut China Selatan utara Natuna",
+    "propinsi": "Kep. Riau",
+    "icon_propinsi": "riau-kep.jpeg",
+    "order": 4
+  },
+  {
+    "kode": "D.02",
+    "nama": "Perairan Kep. Natuna",
+    "propinsi": "Kep. Riau",
+    "icon_propinsi": "riau-kep.jpeg",
+    "order": 4
+  },
+  {
+    "kode": "D.03",
+    "nama": "Perairan Kep. Anambas",
+    "propinsi": "Kep. Riau",
+    "icon_propinsi": "riau-kep.jpeg",
+    "order": 4
+  },
+  {
+    "kode": "D.04",
+    "nama": "Laut Natuna",
+    "propinsi": "Kep. Riau",
+    "icon_propinsi": "riau-kep.jpeg",
+    "order": 4
+  },
+  {
+    "kode": "E.01",
+    "nama": "Perairan Batam - Bintan",
+    "propinsi": "Kep. Riau",
+    "icon_propinsi": "riau-kep.jpeg",
+    "order": 4
+  },
+  {
+    "kode": "E.02",
+    "nama": "Perairan Kepulauan Lingga",
+    "propinsi": "Kep. Riau",
+    "icon_propinsi": "riau-kep.jpeg",
+    "order": 4
+  },
+  {
+    "kode": "E.03",
+    "nama": "Selat Berhala",
+    "propinsi": "Kep. Riau",
+    "icon_propinsi": "riau-kep.jpeg",
+    "order": 4
+  },
+  {
+    "kode": "F.01",
+    "nama": "Perairan utara Pangkal Pinang",
+    "propinsi": "Jambi",
+    "icon_propinsi": "jambi.png",
+    "order": 5
+  },
+  {
+    "kode": "F.02",
+    "nama": "Selat Gelasa",
+    "propinsi": "Jambi",
+    "icon_propinsi": "jambi.png",
+    "order": 5
+  },
+  {
+    "kode": "F.03",
+    "nama": "Selat Bangka bagian utara",
+    "propinsi": "Jambi",
+    "icon_propinsi": "jambi.png",
+    "order": 5
+  },
+  {
+    "kode": "F.04",
+    "nama": "Selat Bangka bagian selatan",
+    "propinsi": "Jambi",
+    "icon_propinsi": "jambi.png",
+    "order": 5
+  },
+  {
+    "kode": "F.02",
+    "nama": "Selat Gelasa",
+    "propinsi": "Sumatera Selatan",
+    "icon_propinsi": "sumatera-selatan.png",
+    "order": 6
+  },
+  {
+    "kode": "D.07",
+    "nama": "Selat Karimata bagian utara",
+    "propinsi": "Bangka Belitung",
+    "icon_propinsi": "bangka-belitung.png",
+    "order": 7
+  },
+  {
+    "kode": "E.03",
+    "nama": "Selat Berhala",
+    "propinsi": "Bangka Belitung",
+    "icon_propinsi": "bangka-belitung.png",
+    "order": 7
+  },
+  {
+    "kode": "F.01",
+    "nama": "Perairan utara Pangkal Pinang",
+    "propinsi": "Bangka Belitung",
+    "icon_propinsi": "bangka-belitung.png",
+    "order": 7
+  },
+  {
+    "kode": "F.02",
+    "nama": "Selat Gelasa",
+    "propinsi": "Bangka Belitung",
+    "icon_propinsi": "bangka-belitung.png",
+    "order": 7
+  },
+  {
+    "kode": "F.03",
+    "nama": "Selat Bangka bagian utara",
+    "propinsi": "Bangka Belitung",
+    "icon_propinsi": "bangka-belitung.png",
+    "order": 7
+  },
+  {
+    "kode": "F.04",
+    "nama": "Selat Bangka bagian selatan",
+    "propinsi": "Bangka Belitung",
+    "icon_propinsi": "bangka-belitung.png",
+    "order": 7
+  },
+  {
+    "kode": "F.05",
+    "nama": "Selat Karimata bagian selatan",
+    "propinsi": "Bangka Belitung",
+    "icon_propinsi": "bangka-belitung.png",
+    "order": 7
+  },
+  {
+    "kode": "B.03",
+    "nama": "Perairan Bengkulu",
+    "propinsi": "Bengkulu",
+    "icon_propinsi": "bengkulu.png",
+    "order": 8
+  },
+  {
+    "kode": "B.04",
+    "nama": "Samudera Hindia barat Bengkulu",
+    "propinsi": "Bengkulu",
+    "icon_propinsi": "bengkulu.png",
+    "order": 8
+  },
+  {
+    "kode": "C.01",
+    "nama": "Perairan barat Lampung",
+    "propinsi": "Lampung",
+    "icon_propinsi": "lampung.png",
+    "order": 9
+  },
+  {
+    "kode": "C.02",
+    "nama": "Samudera Hindia barat Lampung",
+    "propinsi": "Lampung",
+    "icon_propinsi": "lampung.png",
+    "order": 9
+  },
+  {
+    "kode": "C.03",
+    "nama": "Selat Sunda bagian utara",
+    "propinsi": "Lampung",
+    "icon_propinsi": "lampung.png",
+    "order": 9
+  },
+  {
+    "kode": "C.04",
+    "nama": "Selat Sunda bagian selatan",
+    "propinsi": "Lampung",
+    "icon_propinsi": "lampung.png",
+    "order": 9
+  },
+  {
+    "kode": "C.05",
+    "nama": "Perairan timur Lampung",
+    "propinsi": "Lampung",
+    "icon_propinsi": "lampung.png",
+    "order": 9
+  },
+  {
+    "kode": "F.06",
+    "nama": "Laut Jawa bagian barat",
+    "propinsi": "DKI Jakarta",
+    "icon_propinsi": "jakarta.png",
+    "order": 10
+  },
+  {
+    "kode": "F.07",
+    "nama": "Perairan Kep. Seribu",
+    "propinsi": "DKI Jakarta",
+    "icon_propinsi": "jakarta.png",
+    "order": 10
+  },
+  {
+    "kode": "F.08",
+    "nama": "Perairan utara Jawa Barat",
+    "propinsi": "DKI Jakarta",
+    "icon_propinsi": "jakarta.png",
+    "order": 10
+  },
+  {
+    "kode": "F.08",
+    "nama": "Perairan utara Jawa Barat",
+    "propinsi": "Jawa Barat",
+    "icon_propinsi": "jawa-barat.png",
+    "order": 11
+  },
+  {
+    "kode": "F.10",
+    "nama": "Samudera Hindia selatan Jawa Barat",
+    "propinsi": "Jawa Barat",
+    "icon_propinsi": "jawa-barat.png",
+    "order": 11
+  },
+  {
+    "kode": "C.03",
+    "nama": "Selat Sunda bagian utara",
+    "propinsi": "Banten",
+    "icon_propinsi": "banten.png",
+    "order": 12
+  },
+  {
+    "kode": "C.04",
+    "nama": "Selat Sunda bagian selatan",
+    "propinsi": "Banten",
+    "icon_propinsi": "banten.png",
+    "order": 12
+  },
+  {
+    "kode": "F.06",
+    "nama": "Laut Jawa bagian barat",
+    "propinsi": "Banten",
+    "icon_propinsi": "banten.png",
+    "order": 12
+  },
+  {
+    "kode": "F.07",
+    "nama": "Perairan Kep. Seribu",
+    "propinsi": "Banten",
+    "icon_propinsi": "banten.png",
+    "order": 12
+  },
+  {
+    "kode": "F.11",
+    "nama": "Perairan selatan Banten",
+    "propinsi": "Banten",
+    "icon_propinsi": "banten.png",
+    "order": 12
+  },
+  {
+    "kode": "F.12",
+    "nama": "Samudera Hindia selatan Banten",
+    "propinsi": "Banten",
+    "icon_propinsi": "banten.png",
+    "order": 12
+  },
+  {
+    "kode": "G.02",
+    "nama": "Laut Jawa bagian tengah",
+    "propinsi": "Jawa Tengah",
+    "icon_propinsi": "jawa-tengah.png",
+    "order": 13
+  },
+  {
+    "kode": "G.03",
+    "nama": "Perairan Kep. Karimun Jawa",
+    "propinsi": "Jawa Tengah",
+    "icon_propinsi": "jawa-tengah.png",
+    "order": 13
+  },
+  {
+    "kode": "G.04",
+    "nama": "Perairan utara Jawa Tengah",
+    "propinsi": "Jawa Tengah",
+    "icon_propinsi": "jawa-tengah.png",
+    "order": 13
+  },
+  {
+    "kode": "H.01",
+    "nama": "Perairan selatan Jawa Tengah",
+    "propinsi": "D.I.Yogyakarta",
+    "icon_propinsi": "yogyakarta.png",
+    "order": 14
+  },
+  {
+    "kode": "H.02",
+    "nama": "Samudera Hindia selatan Jawa Tengah",
+    "propinsi": "D.I.Yogyakarta",
+    "icon_propinsi": "yogyakarta.png",
+    "order": 14
+  },
+  {
+    "kode": "I.01",
+    "nama": "Laut Jawa bagian timur",
+    "propinsi": "Jawa Timur",
+    "icon_propinsi": "jawa-timur.png",
+    "order": 15
+  },
+  {
+    "kode": "I.02",
+    "nama": "Perairan Kepulauan Masalembu",
+    "propinsi": "Jawa Timur",
+    "icon_propinsi": "jawa-timur.png",
+    "order": 15
+  },
+  {
+    "kode": "I.03",
+    "nama": "Perairan Pulau Bawean",
+    "propinsi": "Jawa Timur",
+    "icon_propinsi": "jawa-timur.png",
+    "order": 15
+  },
+  {
+    "kode": "I.04",
+    "nama": "Perairan utara Jawa Timur",
+    "propinsi": "Jawa Timur",
+    "icon_propinsi": "jawa-timur.png",
+    "order": 15
+  },
+  {
+    "kode": "I.05",
+    "nama": "Perairan Gresik",
+    "propinsi": "Jawa Timur",
+    "icon_propinsi": "jawa-timur.png",
+    "order": 15
+  },
+  {
+    "kode": "I.06",
+    "nama": "Selat Madura",
+    "propinsi": "Jawa Timur",
+    "icon_propinsi": "jawa-timur.png",
+    "order": 15
+  },
+  {
+    "kode": "I.08",
+    "nama": "Perairan Selatan Jawa Timur",
+    "propinsi": "Jawa Timur",
+    "icon_propinsi": "jawa-timur.png",
+    "order": 15
+  },
+  {
+    "kode": "I.09",
+    "nama": "Samudera Hindia selatan Jawa Timur",
+    "propinsi": "Jawa Timur",
+    "icon_propinsi": "jawa-timur.png",
+    "order": 15
+  },
+  {
+    "kode": "J.02",
+    "nama": "Selat Bali bagian utara",
+    "propinsi": "Jawa Timur",
+    "icon_propinsi": "jawa-timur.png",
+    "order": 15
+  },
+  {
+    "kode": "J.03",
+    "nama": "Selat Bali bagian selatan",
+    "propinsi": "Jawa Timur",
+    "icon_propinsi": "jawa-timur.png",
+    "order": 15
+  },
+  {
+    "kode": "I.07",
+    "nama": "Perairan Kepulauan Kangean",
+    "propinsi": "Bali",
+    "icon_propinsi": "bali.png",
+    "order": 16
+  },
+  {
+    "kode": "J.01",
+    "nama": "Laut Bali",
+    "propinsi": "Bali",
+    "icon_propinsi": "bali.png",
+    "order": 16
+  },
+  {
+    "kode": "J.02",
+    "nama": "Selat Bali bagian utara",
+    "propinsi": "Bali",
+    "icon_propinsi": "bali.png",
+    "order": 16
+  },
+  {
+    "kode": "J.03",
+    "nama": "Selat Bali bagian selatan",
+    "propinsi": "Bali",
+    "icon_propinsi": "bali.png",
+    "order": 16
+  },
+  {
+    "kode": "J.04",
+    "nama": "Selat Badung",
+    "propinsi": "Bali",
+    "icon_propinsi": "bali.png",
+    "order": 16
+  },
+  {
+    "kode": "J.05",
+    "nama": "Samudera Hindia selatan Bali",
+    "propinsi": "Bali",
+    "icon_propinsi": "bali.png",
+    "order": 16
+  },
+  {
+    "kode": "J.06",
+    "nama": "Selat Lombok bagian utara",
+    "propinsi": "Bali",
+    "icon_propinsi": "bali.png",
+    "order": 16
+  },
+  {
+    "kode": "J.07",
+    "nama": "Selat Lombok bagian selatan",
+    "propinsi": "Bali",
+    "icon_propinsi": "bali.png",
+    "order": 16
+  },
+  {
+    "kode": "J.06",
+    "nama": "Selat Lombok bagian utara",
+    "propinsi": "NTB",
+    "icon_propinsi": "ntb.png",
+    "order": 17
+  },
+  {
+    "kode": "J.07",
+    "nama": "Selat Lombok bagian selatan",
+    "propinsi": "NTB",
+    "icon_propinsi": "ntb.png",
+    "order": 17
+  },
+  {
+    "kode": "J.08",
+    "nama": "Selat Alas bagian utara",
+    "propinsi": "NTB",
+    "icon_propinsi": "ntb.png",
+    "order": 17
+  },
+  {
+    "kode": "J.09",
+    "nama": "Selat Alas bagian selatan",
+    "propinsi": "NTB",
+    "icon_propinsi": "ntb.png",
+    "order": 17
+  },
+  {
+    "kode": "J.10",
+    "nama": "Laut Sumbawa",
+    "propinsi": "NTB",
+    "icon_propinsi": "ntb.png",
+    "order": 17
+  },
+  {
+    "kode": "J.11",
+    "nama": "Perairan utara Sumbawa",
+    "propinsi": "NTB",
+    "icon_propinsi": "ntb.png",
+    "order": 17
+  },
+  {
+    "kode": "J.12",
+    "nama": "Perairan selatan Sumbawa",
+    "propinsi": "NTB",
+    "icon_propinsi": "ntb.png",
+    "order": 17
+  },
+  {
+    "kode": "J.13",
+    "nama": "Samudera Hindia selatan NTB",
+    "propinsi": "NTB",
+    "icon_propinsi": "ntb.png",
+    "order": 17
+  },
+  {
+    "kode": "K.01",
+    "nama": "Selat Sape",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.02",
+    "nama": "Perairan utara Flores",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.03",
+    "nama": "Selat Flores",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.04",
+    "nama": "Selat Lamakera - Selat Boling",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.05",
+    "nama": "Selat Alor",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.06",
+    "nama": "Selat Sumba",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.07",
+    "nama": "Laut Sawu",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.08",
+    "nama": "Selat Ombai",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.09",
+    "nama": "Selat Wetar",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.10",
+    "nama": "Perairan selatan P. Sumba",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.11",
+    "nama": "Samudera Hindia selatan NTT",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.12",
+    "nama": "Perairan selatan Kupang - Pulau Rote",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.13",
+    "nama": "Laut Timor selatan NTT",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "K.14",
+    "nama": "Laut Timor selatan Timor Leste",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "L.07",
+    "nama": "Laut Flores",
+    "propinsi": "NTT",
+    "icon_propinsi": "ntt.png",
+    "order": 18
+  },
+  {
+    "kode": "D.05",
+    "nama": "Perairan Singkawang",
+    "propinsi": "Kalimantan Barat",
+    "icon_propinsi": "kalimantan-barat.png",
+    "order": 19
+  },
+  {
+    "kode": "D.06",
+    "nama": "Perairan Pontianak",
+    "propinsi": "Kalimantan Barat",
+    "icon_propinsi": "kalimantan-barat.png",
+    "order": 19
+  },
+  {
+    "kode": "D.07",
+    "nama": "Selat Karimata bagian utara",
+    "propinsi": "Kalimantan Barat",
+    "icon_propinsi": "kalimantan-barat.png",
+    "order": 19
+  },
+  {
+    "kode": "F.05",
+    "nama": "Selat Karimata bagian selatan",
+    "propinsi": "Kalimantan Barat",
+    "icon_propinsi": "kalimantan-barat.png",
+    "order": 19
+  },
+  {
+    "kode": "G.01",
+    "nama": "Perairan selatan Kalimantan Tengah",
+    "propinsi": "Kalimantan Tengah",
+    "icon_propinsi": "kalimantan-tengah.jpg",
+    "order": 20
+  },
+  {
+    "kode": "G.02",
+    "nama": "Laut Jawa bagian tengah",
+    "propinsi": "Kalimantan Tengah",
+    "icon_propinsi": "kalimantan-tengah.jpg",
+    "order": 20
+  },
+  {
+    "kode": "L.01",
+    "nama": "Selat Makassar bagian selatan",
+    "propinsi": "Kalimantan Selatan",
+    "icon_propinsi": "kalimantan-selatan.gif",
+    "order": 21
+  },
+  {
+    "kode": "M.01",
+    "nama": "Perairan Kotabaru",
+    "propinsi": "Kalimantan Selatan",
+    "icon_propinsi": "kalimantan-selatan.gif",
+    "order": 21
+  },
+  {
+    "kode": "M.03",
+    "nama": "Selat Makassar bagian tengah",
+    "propinsi": "Kalimantan Timur",
+    "icon_propinsi": "kalimantan-timur.png",
+    "order": 22
+  },
+  {
+    "kode": "M.04",
+    "nama": "Selat Makassar bagian utara",
+    "propinsi": "Kalimantan Timur",
+    "icon_propinsi": "kalimantan-timur.png",
+    "order": 22
+  },
+  {
+    "kode": "M.02",
+    "nama": "Perairan Balikpapan",
+    "propinsi": "Kalimantan Timur",
+    "icon_propinsi": "kalimantan-timur.png",
+    "order": 22
+  },
+  {
+    "kode": "N.01",
+    "nama": "Perairan Kalimantan Utara",
+    "propinsi": "Sulawesi Utara",
+    "icon_propinsi": "sulawesi-utara.png",
+    "order": 23
+  },
+  {
+    "kode": "N.02",
+    "nama": "Laut Sulawesi bagian barat",
+    "propinsi": "Sulawesi Utara",
+    "icon_propinsi": "sulawesi-utara.png",
+    "order": 23
+  },
+  {
+    "kode": "N.03",
+    "nama": "Laut Sulawesi bagian tengah",
+    "propinsi": "Sulawesi Utara",
+    "icon_propinsi": "sulawesi-utara.png",
+    "order": 23
+  },
+  {
+    "kode": "N.04",
+    "nama": "Perairan utara Sulawesi",
+    "propinsi": "Sulawesi Utara",
+    "icon_propinsi": "sulawesi-utara.png",
+    "order": 23
+  },
+  {
+    "kode": "N.07",
+    "nama": "Laut Sulawesi bagian timur",
+    "propinsi": "Sulawesi Utara",
+    "icon_propinsi": "sulawesi-utara.png",
+    "order": 23
+  },
+  {
+    "kode": "N.08",
+    "nama": "Perairan Kepulauan Sangihe",
+    "propinsi": "Sulawesi Utara",
+    "icon_propinsi": "sulawesi-utara.png",
+    "order": 23
+  },
+  {
+    "kode": "N.09",
+    "nama": "Perairan Kepulauan Talaud",
+    "propinsi": "Sulawesi Utara",
+    "icon_propinsi": "sulawesi-utara.png",
+    "order": 23
+  },
+  {
+    "kode": "N.10",
+    "nama": "Perairan Bitung - Manado",
+    "propinsi": "Sulawesi Utara",
+    "icon_propinsi": "sulawesi-utara.png",
+    "order": 23
+  },
+  {
+    "kode": "N.11",
+    "nama": "Laut Maluku bagian utara",
+    "propinsi": "Sulawesi Utara",
+    "icon_propinsi": "sulawesi-utara.png",
+    "order": 23
+  },
+  {
+    "kode": "N.13",
+    "nama": "Perairan selatan Sulawesi Utara",
+    "propinsi": "Sulawesi Utara",
+    "icon_propinsi": "sulawesi-utara.png",
+    "order": 23
+  },
+  {
+    "kode": "M.03",
+    "nama": "Selat Makassar bagian tengah",
+    "propinsi": "Sulawesi Barat",
+    "icon_propinsi": "sulawesi-barat.png",
+    "order": 24
+  },
+  {
+    "kode": "M.04",
+    "nama": "Selat Makassar bagian utara",
+    "propinsi": "Sulawesi Tengah",
+    "icon_propinsi": "sulawesi-tengah.png",
+    "order": 25
+  },
+  {
+    "kode": "N.06",
+    "nama": "Teluk Tomini utara Poso",
+    "propinsi": "Sulawesi Tengah",
+    "icon_propinsi": "sulawesi-tengah.png",
+    "order": 25
+  },
+  {
+    "kode": "S.05",
+    "nama": "Teluk Tolo",
+    "propinsi": "Sulawesi Tengah",
+    "icon_propinsi": "sulawesi-tengah.png",
+    "order": 25
+  },
+  {
+    "kode": "S.06",
+    "nama": "Perairan Kepulauan Banggai",
+    "propinsi": "Sulawesi Tengah",
+    "icon_propinsi": "sulawesi-tengah.png",
+    "order": 25
+  },
+  {
+    "kode": "S.07",
+    "nama": "Perairan Kepulauan Sula",
+    "propinsi": "Sulawesi Tengah",
+    "icon_propinsi": "sulawesi-tengah.png",
+    "order": 25
+  },
+  {
+    "kode": "L.07",
+    "nama": "Laut Flores",
+    "propinsi": "Sulawesi Tenggara",
+    "icon_propinsi": "sulawesi-tenggara.png",
+    "order": 26
+  },
+  {
+    "kode": "S.01",
+    "nama": "Perairan Bau-bau",
+    "propinsi": "Sulawesi Tenggara",
+    "icon_propinsi": "sulawesi-tenggara.png",
+    "order": 26
+  },
+  {
+    "kode": "S.02",
+    "nama": "Perairan Kepulauan Wakatobi",
+    "propinsi": "Sulawesi Tenggara",
+    "icon_propinsi": "sulawesi-tenggara.png",
+    "order": 26
+  },
+  {
+    "kode": "S.03",
+    "nama": "Perairan Manui - Kendari",
+    "propinsi": "Sulawesi Tenggara",
+    "icon_propinsi": "sulawesi-tenggara.png",
+    "order": 26
+  },
+  {
+    "kode": "S.04",
+    "nama": "Laut Banda timur Sulawesi Tenggara",
+    "propinsi": "Sulawesi Tenggara",
+    "icon_propinsi": "sulawesi-tenggara.png",
+    "order": 26
+  },
+  {
+    "kode": "L.01",
+    "nama": "Selat Makassar bagian selatan",
+    "propinsi": "Sulawesi Selatan",
+    "icon_propinsi": "sulawesi-selatan.png",
+    "order": 27
+  },
+  {
+    "kode": "L.02",
+    "nama": "Perairan barat Sulawesi Selatan",
+    "propinsi": "Sulawesi Selatan",
+    "icon_propinsi": "sulawesi-selatan.png",
+    "order": 27
+  },
+  {
+    "kode": "L.03",
+    "nama": "Perairan Kepulauan Salabana",
+    "propinsi": "Sulawesi Selatan",
+    "icon_propinsi": "sulawesi-selatan.png",
+    "order": 27
+  },
+  {
+    "kode": "L.04",
+    "nama": "Perairan Kepulauan Selayar",
+    "propinsi": "Sulawesi Selatan",
+    "icon_propinsi": "sulawesi-selatan.png",
+    "order": 27
+  },
+  {
+    "kode": "L.05",
+    "nama": "Teluk Bone bagian utara",
+    "propinsi": "Sulawesi Selatan",
+    "icon_propinsi": "sulawesi-selatan.png",
+    "order": 27
+  },
+  {
+    "kode": "L.06",
+    "nama": "Teluk Bone bagian selatan",
+    "propinsi": "Sulawesi Selatan",
+    "icon_propinsi": "sulawesi-selatan.png",
+    "order": 27
+  },
+  {
+    "kode": "L.07",
+    "nama": "Laut Flores",
+    "propinsi": "Sulawesi Selatan",
+    "icon_propinsi": "sulawesi-selatan.png",
+    "order": 27
+  },
+  {
+    "kode": "N.05",
+    "nama": "Teluk Tomini selatan Gorontalo",
+    "propinsi": "Gorontalo",
+    "icon_propinsi": "gorontalo.jpg",
+    "order": 28
+  },
+  {
+    "kode": "T.01",
+    "nama": "Laut Seram bagian barat",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "T.02",
+    "nama": "Laut Seram bagian timur",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "T.03",
+    "nama": "Perairan selatan Ambon",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "T.04",
+    "nama": "Laut Banda bagian utara",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "T.05",
+    "nama": "Laut Banda bagian selatan",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "T.06",
+    "nama": "Perairan Kepulauan Kai",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "T.07",
+    "nama": "Perairan Kepulauan Aru",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "T.08",
+    "nama": "Perairan Kepulauan Tanimbar",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "T.09",
+    "nama": "Perairan Kepulauan Babar",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "T.10",
+    "nama": "Perairan Kep. Sermata - Kep. Leti",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "T.11",
+    "nama": "Laut Arafuru bagian barat",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "T.12",
+    "nama": "Laut Arafuru bagian tengah",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "S.04",
+    "nama": "Laut Banda timur Sulawesi Tenggara",
+    "propinsi": "Maluku",
+    "icon_propinsi": "maluku.png",
+    "order": 29
+  },
+  {
+    "kode": "N.11",
+    "nama": "Laut Maluku bagian utara",
+    "propinsi": "Maluku Utara",
+    "icon_propinsi": "maluku-utara.png",
+    "order": 30
+  },
+  {
+    "kode": "N.12",
+    "nama": "Laut Maluku bagian selatan",
+    "propinsi": "Maluku Utara",
+    "icon_propinsi": "maluku-utara.png",
+    "order": 30
+  },
+  {
+    "kode": "O.01",
+    "nama": "Samudera Pasifik utara Kep. Halmahera",
+    "propinsi": "Maluku Utara",
+    "icon_propinsi": "maluku-utara.png",
+    "order": 30
+  },
+  {
+    "kode": "O.02",
+    "nama": "Laut Halmahera",
+    "propinsi": "Maluku Utara",
+    "icon_propinsi": "maluku-utara.png",
+    "order": 30
+  },
+  {
+    "kode": "O.03",
+    "nama": "Perairan utara Kep. Halmahera",
+    "propinsi": "Maluku Utara",
+    "icon_propinsi": "maluku-utara.png",
+    "order": 30
+  },
+  {
+    "kode": "O.04",
+    "nama": "Perairan timur Kep. Halmahera",
+    "propinsi": "Maluku Utara",
+    "icon_propinsi": "maluku-utara.png",
+    "order": 30
+  },
+  {
+    "kode": "O.05",
+    "nama": "Perairan barat Kep. Halmahera",
+    "propinsi": "Maluku Utara",
+    "icon_propinsi": "maluku-utara.png",
+    "order": 30
+  },
+  {
+    "kode": "S.07",
+    "nama": "Perairan Kepulauan Sula",
+    "propinsi": "Maluku Utara",
+    "icon_propinsi": "maluku-utara.png",
+    "order": 30
+  },
+  {
+    "kode": "T.01",
+    "nama": "Laut Seram bagian barat",
+    "propinsi": "Maluku Utara",
+    "icon_propinsi": "maluku-utara.png",
+    "order": 30
+  },
+  {
+    "kode": "T.02",
+    "nama": "Laut Seram bagian timur",
+    "propinsi": "Maluku Utara",
+    "icon_propinsi": "maluku-utara.png",
+    "order": 30
+  },
+  {
+    "kode": "P.01",
+    "nama": "Samudera Pasifik utara Papua Barat",
+    "propinsi": "Papua Barat",
+    "icon_propinsi": "papua-barat.png",
+    "order": 31
+  },
+  {
+    "kode": "P.02",
+    "nama": "Perairan Raja Ampat - Sorong",
+    "propinsi": "Papua Barat",
+    "icon_propinsi": "papua-barat.png",
+    "order": 31
+  },
+  {
+    "kode": "P.03",
+    "nama": "Perairan Fak-fak - Kaimana",
+    "propinsi": "Papua Barat",
+    "icon_propinsi": "papua-barat.png",
+    "order": 31
+  },
+  {
+    "kode": "P.04",
+    "nama": "Perairan Manokwari",
+    "propinsi": "Papua",
+    "icon_propinsi": "papua.png",
+    "order": 32
+  },
+  {
+    "kode": "Q.01",
+    "nama": "Samudera Pasifik utara Biak",
+    "propinsi": "Papua",
+    "icon_propinsi": "papua.png",
+    "order": 32
+  },
+  {
+    "kode": "Q.02",
+    "nama": "Perairan Biak",
+    "propinsi": "Papua",
+    "icon_propinsi": "papua.png",
+    "order": 32
+  },
+  {
+    "kode": "Q.03",
+    "nama": "Teluk Cendrawasih",
+    "propinsi": "Papua",
+    "icon_propinsi": "papua.png",
+    "order": 32
+  },
+  {
+    "kode": "Q.04",
+    "nama": "Samudera Pasifik utara Jayapura",
+    "propinsi": "Papua",
+    "icon_propinsi": "papua.png",
+    "order": 32
+  },
+  {
+    "kode": "Q.05",
+    "nama": "Perairan Jayapura - Sarmi",
+    "propinsi": "Papua",
+    "icon_propinsi": "papua.png",
+    "order": 32
+  },
+  {
+    "kode": "R.01",
+    "nama": "Perairan Amamapere - Agats",
+    "propinsi": "Papua",
+    "icon_propinsi": "papua.png",
+    "order": 32
+  },
+  {
+    "kode": "R.02",
+    "nama": "Perairan Yos Sudarso",
+    "propinsi": "Papua",
+    "icon_propinsi": "papua.png",
+    "order": 32
+  },
+  {
+    "kode": "R.03",
+    "nama": "Perairan Merauke",
+    "propinsi": "Papua",
+    "icon_propinsi": "papua.png",
+    "order": 32
+  },
+  {
+    "kode": "R.04",
+    "nama": "Laut Arafuru bagian timur",
+    "propinsi": "Papua",
+    "icon_propinsi": "papua.png",
+    "order": 32
   }
 ]

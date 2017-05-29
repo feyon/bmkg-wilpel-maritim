@@ -28,7 +28,7 @@
 
             <li>
                 <ul class="collapsible collapsible-accordion">
-                    <li ng-repeat="(key,value) in arealist | orderBy:'kode' | filter:searchArea | groupBy:'propinsi'">
+                    <li ng-repeat="(key,value) in arealist | orderBy:'order' | filter:searchArea | groupBy:'propinsi'">
                         <a class="collapsible-header waves-effect waves-teal">
                             <img src="assets/icon_provinsi/{{value[0].icon_propinsi}}" width="25" style="vertical-align:middle;">
                                 <span class="propinsi">{{key | cut:true:30:'...'}}</span>
@@ -36,7 +36,7 @@
                             </a>
                         <div class="collapsible-body">
                             <ul>
-                                <li ng-repeat="area in value | orderBy:'kode'">
+                                <li ng-repeat="area in value">
                                 <a href="#" ng-click="jumpToArea(area.kode)">{{area.nama | cut:true:30:'...'}}</a>
                             </li>
                             </ul>
@@ -338,7 +338,19 @@
                 </i></p>
             </div> 
         </div>
-            
+        
+        <!--areasekitar-->
+        <div class="areasekitar">
+            <p class="areasekitar-title">Wilayah Perairan</p>
+            <div class="row center-align">
+                <div class="col s3" ng-repeat="area in areasekitar">
+                    <p class="areasekitar-name">{{area.nama}}</p>
+                    <img src="assets/weather/waves.svg" class="responsive-img">
+                    <p>1 - 2.5 m</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!--jquery-->

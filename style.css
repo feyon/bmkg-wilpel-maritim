@@ -195,3 +195,30 @@ p.province{
 span.propinsi{
     padding-left: 10px;
 }
+
+.areasekitar{
+    border-top: 1px solid gray;
+    padding-top: 5px;
+}
+
+.areasekitar .row .col{
+    font-size: 8pt;
+    padding: 5px;
+}
+
+.areasekitar p, 
+.areasekitar .row .col p{
+    padding: 3px 0;
+}
+
+.areasekitar-title{
+    padding: 0 5px !important;
+}
+
+.areasekitar-name{
+    min-height: 51px;
+}
+
+.areasekitar .row .col img{
+    width: 50%;
+}
