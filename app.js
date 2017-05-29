@@ -89,7 +89,7 @@ angular.module('app', ['ngSanitize','angular.filter'])
         }
 
         // magic is here :D
-        $scope.$apply(function(){
+        $scope.$applyAsync(function(){
             $scope.detailBar = {'height':'15%'};
             $scope.mapStyle = {'height':'85%'};
             $scope.area = area;
