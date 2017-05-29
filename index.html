@@ -148,6 +148,17 @@
                 {{dataArea.h.valid_to}} {{dataArea.h.timezone}}
                 </i></p>
             </div> 
+            <!--areasekitar-->
+            <div class="areasekitar">
+                <p class="areasekitar-title">Wilayah Perairan</p>
+                <div class="row center-align">
+                    <div class="col s3" ng-repeat="area in areasekitar | limitTo:4">
+                        <p class="areasekitar-name">{{area[0].nama_perairan}}</p>
+                        <img src="assets/weather/waves.svg" class="responsive-img">
+                        <p>{{area.kategoris[0].gelombang_min}} - {{area.kategoris[0].gelombang_max}} m</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--Besok-->
@@ -210,6 +221,17 @@
                 s/d <br>
                 {{dataArea.h1.valid_to}} {{dataArea.h1.timezone}}
                 </i></p>
+            </div>
+            <!--areasekitar-->
+            <div class="areasekitar">
+                <p class="areasekitar-title">Wilayah Perairan</p>
+                <div class="row center-align">
+                    <div class="col s3" ng-repeat="area in areasekitar | limitTo:4">
+                        <p class="areasekitar-name">{{area[0].nama_perairan}}</p>
+                        <img src="assets/weather/waves.svg" class="responsive-img">
+                        <p>{{area.kategoris[1].gelombang_min}} - {{area.kategoris[1].gelombang_max}} m</p>
+                    </div>
+                </div>
             </div> 
         </div>
         
@@ -274,6 +296,17 @@
                 {{dataArea.h2.valid_to}} {{dataArea.h2.timezone}}
                 </i></p>
             </div> 
+            <!--areasekitar-->
+            <div class="areasekitar">
+                <p class="areasekitar-title">Wilayah Perairan</p>
+                <div class="row center-align">
+                    <div class="col s3" ng-repeat="area in areasekitar | limitTo:4">
+                        <p class="areasekitar-name">{{area[0].nama_perairan}}</p>
+                        <img src="assets/weather/waves.svg" class="responsive-img">
+                        <p>{{area.kategoris[2].gelombang_min}} - {{area.kategoris[2].gelombang_max}} m</p>
+                    </div>
+                </div>
+            </div>
         </div>
                 
         <!--H+3-->
@@ -336,20 +369,20 @@
                 s/d <br>
                 {{dataArea.h3.valid_to}} {{dataArea.h3.timezone}}
                 </i></p>
-            </div> 
-        </div>
-        
-        <!--areasekitar-->
-        <div class="areasekitar">
-            <p class="areasekitar-title">Wilayah Perairan</p>
-            <div class="row center-align">
-                <div class="col s3" ng-repeat="area in areasekitar">
-                    <p class="areasekitar-name">{{area.nama}}</p>
-                    <img src="assets/weather/waves.svg" class="responsive-img">
-                    <p>1 - 2.5 m</p>
+            </div>
+            <!--areasekitar-->
+            <div class="areasekitar">
+                <p class="areasekitar-title">Wilayah Perairan</p>
+                <div class="row center-align">
+                    <div class="col s3" ng-repeat="area in areasekitar | limitTo:4">
+                        <p class="areasekitar-name">{{area[0].nama_perairan}}</p>
+                        <img src="assets/weather/waves.svg" class="responsive-img">
+                        <p>{{area.kategoris[3].gelombang_min}} - {{area.kategoris[3].gelombang_max}} m</p>
+                    </div>
                 </div>
             </div>
         </div>
+        
 
     </div>
 

@@ -22,7 +22,7 @@ angular.module('app', ['ngSanitize','angular.filter'])
             return value + (tail || ' …');
         };
     })
-.controller('MainCtrl', function ($scope, $window, $http, $sce) {
+.controller('MainCtrl', function ($scope, $window, $http, $sce, $q) {
     
     // init map
     $window.map  = new google.maps.Map(document.getElementById('map'), {
@@ -113,7 +113,7 @@ angular.module('app', ['ngSanitize','angular.filter'])
             $scope.detailBtnTxt = "Tampilkan Wilayah Perairan";
             $scope.areaName = true;
 
-            //get province from mapping.json
+            //get current province from mapping.json
             $.getJSON("assets/area/mapping.json", function(data){
                 var areasekitar = [];
                 for(var i=0;i<data.length;i++){
@@ -129,29 +129,16 @@ angular.module('app', ['ngSanitize','angular.filter'])
                     //create area sekitar
                     if(data[i].propinsi==province && data[i].kode != codearea){
                         const url_sekitar = 'http://maritim.bmkg.go.id/xml/wilayah_pelayanan/prakiraan?kode='+data[i].kode+'&format=json';
-                        //get detail from api
-                        var area;
-                        area = {
-                            'kode':data[i].kode,
-                            'nama':data[i].nama                                
-                        }
                         //get waves of nearby area
-                        $.getJSON(url_sekitar,function(area_sekitar){
-                            console.log(area_sekitar);
-                            // area[i].gel_max = area_sekitar.kategoris[0].gelombang_max;
-                            // area[i].gel_min = area_sekitar.kategoris[0].gelombang_min; 
-                        }).done(function(){
-                            // console.log(area);
+                        $http.get(url_sekitar).then(function(data) {
+                            areasekitar.push(data.data);
                         });
-                        
-                        areasekitar.push(area);
-                        
                     }
                 }
                  $scope.$apply(function(){
-                    $scope.areasekitar = areasekitar.slice(0,4);
+                    $scope.areasekitar = areasekitar;
                 });
-                console.log(areasekitar);
+                // console.log(areasekitar);
             });
             
 
