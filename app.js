@@ -239,7 +239,7 @@ angular.module('app', ['ngSanitize','angular.filter'])
             return ({
                 fillColor: 'green',
                 strokeWeight: 1,
-                strokeColor: 'yellow'
+                strokeColor: 'green'
             });
         });
         const center = {lat: -5.087470, lng: 117.670192};
