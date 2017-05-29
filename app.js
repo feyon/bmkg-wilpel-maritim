@@ -37,36 +37,31 @@ angular.module('app', ['ngSanitize','angular.filter'])
 
     tryGeolocation();
     
-    // getAreaJson();
+    // get all area poly
     $.getJSON("assets/area/map.json", function(data){
         geoJsonObject = topojson.feature(data, data.objects.collection);
         map.data.addGeoJson(geoJsonObject); 
         console.log('areas are loaded..');
     }); 
     
-    // get area list in navigation
+    // get area list in sidebar navigation
     $.getJSON("assets/area/mapping.json", function(data){        
         $scope.$apply(function(){
             $scope.arealist = data;
         }); 
     }); 
  
-    //set initial state transparent for each polygon
-    map.data.setStyle(function(feature){
-        var color = "transparent";
-        // if (feature.getProperty('focus')) {
-        //         color = 'green';
-        //     }
-        return ({
-            fillColor: color,
-            strokeWeight: 0,
-            // strokeColor: 'green'
-        });
-    });
+    setMapTranparent();
 
     //click event on outside poly
     map.addListener('click',function(event){
-        map.data.revertStyle();
+        if($scope.showAllTrue){
+            setMapTranparent();
+            $scope.showAllTrue = false;            
+        }else{
+          map.data.revertStyle();  
+        } 
+        
         // magic is here :D
         $scope.$apply(function(){
             $scope.detailBar = {'height':'0'};
@@ -77,8 +72,13 @@ angular.module('app', ['ngSanitize','angular.filter'])
     // Set click event for each feature.
     map.data.addListener('click', function(event) {
         //revert to transparent style
-        map.data.revertStyle();
-        // event.feature.setProperty('focus', true);
+        if($scope.showAllTrue){
+            setMapTranparent();
+            $scope.showAllTrue = false;
+        }else{
+          map.data.revertStyle();  
+        }
+        
         map.data.overrideStyle(event.feature, {
             fillColor: 'green',
         });
@@ -233,17 +233,22 @@ angular.module('app', ['ngSanitize','angular.filter'])
         });
     }
 
+    //show all Indonesia
+    $scope.showAllPoly = function(){
+        map.data.setStyle(function(feature){
+            return ({
+                fillColor: 'green',
+                strokeWeight: 1,
+                strokeColor: 'yellow'
+            });
+        });
+        const center = {lat: -5.087470, lng: 117.670192};
+        map.setCenter(center);
+        map.setZoom(4);
+        $scope.showAllTrue = true;
+    }
+
 }); //end of controller
-
-
-//get json file add to map from jquery
-const getAreaJson = function(){
-    $.getJSON("assets/area/map.json", function(data){
-        geoJsonObject = topojson.feature(data, data.objects.collection);
-        map.data.addGeoJson(geoJsonObject); 
-        console.log('areas are loaded..');
-      }); 
-}
 
 //geolocation host on https or ssl with gmap api
 const tryGeolocation = function() {
@@ -304,6 +309,18 @@ const apiGeolocationSuccess = function(position) {
     console.log("API geolocation success!\n\nlat = " + position.coords.latitude + "\nlng = " + position.coords.longitude);
     zoomCenter(position);
 };
+
+const setMapTranparent = function(){
+    //set initial state transparent for each polygon
+    map.data.setStyle(function(feature){
+        var color = "transparent";
+        return ({
+            fillColor: color,
+            strokeWeight: 0,
+            // strokeColor: 'green'
+        });
+    });
+}
 
 //convert A.1 -> A.01
 function matchAreaToJson(str){

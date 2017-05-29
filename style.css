@@ -54,6 +54,11 @@ li.search .search-wrapper i.material-icons {
     height: 50px;
     line-height: 50px;
 }
+
+.side-nav li>a {
+    padding: 0 16px;
+}
+
 .navbar-fixed{
     z-index: 500;
 }
