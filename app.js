@@ -144,7 +144,7 @@ angular.module('app', ['ngSanitize','angular.filter'])
 
             //get detail from api
             $.getJSON(url,function(data){
-                console.log(data);                
+                // console.log(data);                
                 obj = data;
                 // magic is here :D
                 $scope.$apply(function(){
