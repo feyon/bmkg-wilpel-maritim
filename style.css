@@ -166,6 +166,10 @@ nav .brand-logo{
     margin: 0;
     padding: 0;
 }
+.wind-info .s4{
+    padding: 0 5px;
+}
+
 .wind-info div:first-child{
     border-right: 1px solid white;
 }

@@ -144,7 +144,7 @@ angular.module('app', ['ngSanitize','angular.filter'])
 
             //get detail from api
             $.getJSON(url,function(data){
-                // console.log('Loading..');                
+                console.log(data);                
                 obj = data;
                 // magic is here :D
                 $scope.$apply(function(){
@@ -155,6 +155,13 @@ angular.module('app', ['ngSanitize','angular.filter'])
                         'h3': obj.kategoris[3],                    
                     };
                     $scope.spinnerShow = true;
+
+
+                    $scope.dataArea.h.icon = matchCuaca($scope.dataArea.h.cuaca);
+                    $scope.dataArea.h1.icon = matchCuaca($scope.dataArea.h1.cuaca);
+                    $scope.dataArea.h2.icon = matchCuaca($scope.dataArea.h2.cuaca);
+                    $scope.dataArea.h3.icon = matchCuaca($scope.dataArea.h3.cuaca);
+
                     //show data as html
                     $scope.dataArea.h.peringatan_dini = $sce.trustAsHtml(obj.kategoris[0].peringatan_dini);
                     $scope.dataArea.h1.peringatan_dini = $sce.trustAsHtml(obj.kategoris[1].peringatan_dini);
@@ -165,11 +172,13 @@ angular.module('app', ['ngSanitize','angular.filter'])
                     $scope.dataArea.h1.kondisi_synoptik = $sce.trustAsHtml(obj.kategoris[1].kondisi_synoptik);
                     $scope.dataArea.h2.kondisi_synoptik = $sce.trustAsHtml(obj.kategoris[2].kondisi_synoptik);
                     $scope.dataArea.h3.kondisi_synoptik = $sce.trustAsHtml(obj.kategoris[3].kondisi_synoptik);
-
-                    $scope.dataArea.h.icon = matchCuaca($scope.dataArea.h.cuaca);
-                    $scope.dataArea.h1.icon = matchCuaca($scope.dataArea.h1.cuaca);
-                    $scope.dataArea.h2.icon = matchCuaca($scope.dataArea.h2.cuaca);
-                    $scope.dataArea.h3.icon = matchCuaca($scope.dataArea.h3.cuaca);
+                    
+                    //status warning
+                    $scope.dataArea.h.status = matchStatusWarning(obj.kategoris[0].status_warning);
+                    $scope.dataArea.h1.status = matchStatusWarning(obj.kategoris[1].status_warning);
+                    $scope.dataArea.h2.status = matchStatusWarning(obj.kategoris[2].status_warning);
+                    $scope.dataArea.h3.status = matchStatusWarning(obj.kategoris[3].status_warning);
+                    
 
                     $scope.dataArea.h.angin_to = matchArahAngin($scope.dataArea.h.angin_to);
                     $scope.dataArea.h1.angin_to = matchArahAngin($scope.dataArea.h1.angin_to);
@@ -382,6 +391,36 @@ function matchArahAngin(str){
             break;            
     }
     return angin;
+}
+
+function matchStatusWarning(str){
+    switch(str){
+        case 'Aman':
+            var status = {
+                'alias': 'SLIGHT',
+                'img': 'waves-slight.svg'
+            }
+            break;
+        case 'Waspada':
+            var status = {
+                'alias': 'MODERATE',
+                'img': 'waves-moderate.svg'
+            }
+            break;
+        case 'Bahaya':
+            var status = {
+                'alias': 'ROUGH',
+                'img': 'waves-rough.svg'
+            }
+            break;
+        case 'Ekstrim':
+            var status = {
+                'alias': 'VERY ROUGH',
+                'img': 'waves-v-rough.svg'                
+            }
+            break;
+    }
+    return status;
 }
 
 function dateStringToFormat(str){
