@@ -101,7 +101,9 @@ angular.module('app', ['ngSanitize','angular.filter'])
             var status = matchStatusWarning(data.kategoris[0].status_warning);
             map.data.overrideStyle(event.feature,{
                 fillColor: status.color,
-                fillOpacity: 0.65
+                fillOpacity: 0.65,
+                strokeWeight: status.stroke,
+                strokeColor: 'green',
             });
             // console.log(status.color);
         });
@@ -410,21 +412,24 @@ function matchStatusWarning(str){
             var status = {
                 'alias': 'SLIGHT',
                 'img': 'waves-slight.svg',
-                'color': 'green'
+                'color': 'transparent',
+                'stroke': 1
             }
             break;
         case 'Waspada':
             var status = {
                 'alias': 'MODERATE',
                 'img': 'waves-moderate.svg',
-                'color': '#fbf821'
+                'color': '#fbf821',
+                'stroke': 0
             }
             break;
         case 'Bahaya':
             var status = {
                 'alias': 'ROUGH',
                 'img': 'waves-rough.svg',
-                'color': '#f00'
+                'color': '#f00',
+                'stroke': 0
             }
             break;
         case 'Ekstrim':
@@ -432,6 +437,7 @@ function matchStatusWarning(str){
                 'alias': 'VERY ROUGH',
                 'img': 'waves-v-rough.svg',
                 'color': '#b5349c',
+                'stroke': 0
             }
             break;
     }
