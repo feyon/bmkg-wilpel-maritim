@@ -95,6 +95,17 @@ angular.module('app', ['ngSanitize','angular.filter'])
             $scope.area = area;
         });
         
+        codearea = matchAreaToJson(area.name); //return i.e : A.1 into A.01;
+        const url = 'http://maritim.bmkg.go.id/xml/wilayah_pelayanan/prakiraan?kode='+codearea+'&format=json';
+        $.getJSON(url,function(data){
+            var status = matchStatusWarning(data.kategoris[0].status_warning);
+            map.data.overrideStyle(event.feature,{
+                fillColor: status.color,
+                fillOpacity: 0.65
+            });
+            // console.log(status.color);
+        });
+
     });
 
     $scope.detailBtnTxt = "Info Selengkapnya";            
@@ -398,25 +409,29 @@ function matchStatusWarning(str){
         case 'Aman':
             var status = {
                 'alias': 'SLIGHT',
-                'img': 'waves-slight.svg'
+                'img': 'waves-slight.svg',
+                'color': 'green'
             }
             break;
         case 'Waspada':
             var status = {
                 'alias': 'MODERATE',
-                'img': 'waves-moderate.svg'
+                'img': 'waves-moderate.svg',
+                'color': '#fbf821'
             }
             break;
         case 'Bahaya':
             var status = {
                 'alias': 'ROUGH',
-                'img': 'waves-rough.svg'
+                'img': 'waves-rough.svg',
+                'color': '#f00'
             }
             break;
         case 'Ekstrim':
             var status = {
                 'alias': 'VERY ROUGH',
-                'img': 'waves-v-rough.svg'                
+                'img': 'waves-v-rough.svg',
+                'color': '#b5349c',
             }
             break;
     }
