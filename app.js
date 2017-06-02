@@ -55,12 +55,7 @@ angular.module('app', ['ngSanitize','angular.filter'])
 
     //click event on outside poly
     map.addListener('click',function(event){
-        if($scope.showAllTrue){
-            setMapTranparent();
-            $scope.showAllTrue = false;            
-        }else{
-          map.data.revertStyle();  
-        } 
+        map.data.revertStyle();
         
         // magic is here :D
         $scope.$apply(function(){
@@ -72,15 +67,19 @@ angular.module('app', ['ngSanitize','angular.filter'])
     // Set click event for each feature.
     map.data.addListener('click', function(event) {
         //revert to transparent style
-        if($scope.showAllTrue){
-            setMapTranparent();
-            $scope.showAllTrue = false;
-        }else{
-          map.data.revertStyle();  
-        }
-        
+        map.data.revertStyle();
+        // set another area to default color
+        map.data.forEach(function(feature) {
+            map.data.overrideStyle(feature,{
+                fillColor: '#a3ccff',
+                fillOpacity: 0.65,
+                strokeWeight: 0.3,
+                strokeColor: '#5387cb',
+            });
+        });
+
         map.data.overrideStyle(event.feature, {
-            fillColor: 'green',
+            fillColor: '#5387cb',
         });
 
         const area = {
@@ -102,8 +101,8 @@ angular.module('app', ['ngSanitize','angular.filter'])
             map.data.overrideStyle(event.feature,{
                 fillColor: status.color,
                 fillOpacity: 0.65,
-                strokeWeight: status.stroke,
-                strokeColor: 'green',
+                strokeWeight: 1.5,
+                strokeColor: status.strokeColor,
             });
             // console.log(status.color);
         });
@@ -172,8 +171,8 @@ angular.module('app', ['ngSanitize','angular.filter'])
 
                     $scope.dataArea.h.icon = matchCuaca($scope.dataArea.h.cuaca);
                     $scope.dataArea.h1.icon = matchCuaca($scope.dataArea.h1.cuaca);
-                    $scope.dataArea.h2.icon = matchCuaca($scope.dataArea.h2.cuaca);
-                    $scope.dataArea.h3.icon = matchCuaca($scope.dataArea.h3.cuaca);
+                    // $scope.dataArea.h2.icon = matchCuaca($scope.dataArea.h2.cuaca);
+                    // $scope.dataArea.h3.icon = matchCuaca($scope.dataArea.h3.cuaca);
 
                     //show data as html
                     $scope.dataArea.h.peringatan_dini = $sce.trustAsHtml(obj.kategoris[0].peringatan_dini);
@@ -257,17 +256,26 @@ angular.module('app', ['ngSanitize','angular.filter'])
 
     //show all Indonesia
     $scope.showAllPoly = function(){
-        map.data.setStyle(function(feature){
-            return ({
-                fillColor: 'green',
-                strokeWeight: 1,
-                strokeColor: 'green'
-            });
-        });
+        map.data.revertStyle();          
         const center = {lat: -5.087470, lng: 117.670192};
         map.setCenter(center);
         map.setZoom(4);
-        $scope.showAllTrue = true;
+
+        // set color of each features
+        map.data.forEach(function(feature) {
+            var kode = matchAreaToJson(feature.getProperty('name'));
+            var url = 'http://maritim.bmkg.go.id/xml/wilayah_pelayanan/prakiraan?kode='+kode+'&format=json';
+            
+            $http.get(url).then(function(data) {
+                var status = matchStatusWarning(data.data.kategoris[0].status_warning);
+                map.data.overrideStyle(feature,{
+                    fillColor: status.color,
+                    fillOpacity: 0.65,
+                    strokeWeight: status.stroke,
+                    strokeColor: status.strokeColor,
+                });
+            });
+        });
     }
 
 }); //end of controller
@@ -412,8 +420,9 @@ function matchStatusWarning(str){
             var status = {
                 'alias': 'SLIGHT',
                 'img': 'waves-slight.svg',
-                'color': 'transparent',
-                'stroke': 1
+                'color': '#a3ccff',
+                'stroke': 1,
+                'strokeColor': '#5387cb'
             }
             break;
         case 'Waspada':
@@ -421,7 +430,8 @@ function matchStatusWarning(str){
                 'alias': 'MODERATE',
                 'img': 'waves-moderate.svg',
                 'color': '#fbf821',
-                'stroke': 0
+                'stroke': 1,
+                'strokeColor': '#5387cb'
             }
             break;
         case 'Bahaya':
@@ -429,7 +439,8 @@ function matchStatusWarning(str){
                 'alias': 'ROUGH',
                 'img': 'waves-rough.svg',
                 'color': '#f00',
-                'stroke': 0
+                'stroke': 1,
+                'strokeColor': '#5387cb'
             }
             break;
         case 'Ekstrim':
@@ -437,7 +448,8 @@ function matchStatusWarning(str){
                 'alias': 'VERY ROUGH',
                 'img': 'waves-v-rough.svg',
                 'color': '#b5349c',
-                'stroke': 0
+                'stroke': 1,
+                'strokeColor': '#5387cb'
             }
             break;
     }
