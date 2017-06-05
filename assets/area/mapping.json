@@ -286,6 +286,13 @@
     "icon_propinsi": "jawa-barat.png",
     "order": 11
   },
+    {
+    "kode": "F.09",
+    "nama": "Perairan selatan Jawa Barat",
+    "propinsi": "Jawa Barat",
+    "icon_propinsi": "jawa-barat.png",
+    "order": 11
+  },
   {
     "kode": "F.10",
     "nama": "Samudera Hindia selatan Jawa Barat",
