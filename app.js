@@ -128,8 +128,9 @@ angular.module('app', ['ngSanitize','angular.filter'])
             //get current province from mapping.json
             $.getJSON("assets/area/mapping.json", function(data){
                 var areasekitar = [];
+                var province;                
+                //loop check data current province
                 for(var i=0;i<data.length;i++){
-                    var province;
                     //get region / province
                     if(data[i].kode==codearea){
                         province = data[i].propinsi;
@@ -137,7 +138,10 @@ angular.module('app', ['ngSanitize','angular.filter'])
                             $scope.area.province = province;
                         });
                     }
+                }
 
+                //looping again to get all of area sekitar
+                for(var i=0;i<data.length;i++){
                     //create area sekitar
                     if(data[i].propinsi==province && data[i].kode != codearea){
                         const url_sekitar = 'http://maritim.bmkg.go.id/xml/wilayah_pelayanan/prakiraan?kode='+data[i].kode+'&format=json';
